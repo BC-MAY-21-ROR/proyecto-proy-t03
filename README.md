@@ -4,9 +4,11 @@
 Let Me Help You
 
 ## Problematica que atiende
-In order to help people to have a first approach with a professional about mental health, a platform will be created where they can have access to a catalog of specialists, this through a chat or video call.
+According to a study carried out by the OMS, 93% of the countries in the world has been disturbances in essential mental health services, even paralyzing them. This study covers 130 countries of which 70% have adopted telemedicine and teletherapy as a solution to the problem.
 
 ## Propuesta de solución
+In order to help people to have a first approach with a professional about mental health, a platform will be created where they can have access to a catalog of specialists, this through a chat or video call.
+
 Online psychology platform. For patients seeking psychological care and therapy. For psychologists, a management tool for your consulting.
 
 ## Definición de requerimientos del MVP
