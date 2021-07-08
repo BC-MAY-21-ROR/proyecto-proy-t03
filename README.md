@@ -1,13 +1,13 @@
 ![BrightCoders Logo](img/logo-bc.png)
 
-# Nombre del proyecto
+# Let Me Help You
 Definan un nombre para su proyecto
 
 ## Problematica que atiende
-Describan la problemática que pretenden atender con su proyecto
+In order to help people to have a first approach with a professional about mental health, a platform will be created where they can have access to a catalog of specialists, this through a chat or video call.
 
 ## Propuesta de solución
-Describan de manera general las características de tu propuesta así como la forma en que atiende o resuelve la problemática que definieron.
+Online psychology platform. For patients seeking psychological care and therapy. For psychologists, a management tool for your consulting.
 
 ## Definición de requerimientos del MVP
 
