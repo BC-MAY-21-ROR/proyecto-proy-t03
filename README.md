@@ -1,7 +1,7 @@
 ![BrightCoders Logo](img/logo-bc.png)
 
-# Let Me Help You
-Definan un nombre para su proyecto
+# Nombre del Proyecto
+Let Me Help You
 
 ## Problematica que atiende
 In order to help people to have a first approach with a professional about mental health, a platform will be created where they can have access to a catalog of specialists, this through a chat or video call.
