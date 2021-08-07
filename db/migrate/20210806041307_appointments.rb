@@ -3,8 +3,9 @@ class Appointments < ActiveRecord::Migration[6.1]
     create_table :appointments do |t|
       t.date :date
       t.time :time
-      t.boolean :pay
-      t.belongs_to :user, foreign_key: true
+      t.boolean :pay, null: false, default: false
+      t.string :message
+      t.belongs_to :patient, foreign_key: true
       t.belongs_to :psychologist, foreign_key: true
 
       t.timestamps

@@ -18,26 +18,32 @@ ActiveRecord::Schema.define(version: 2021_08_06_041307) do
   create_table "appointments", force: :cascade do |t|
     t.date "date"
     t.time "time"
-    t.boolean "pay"
-    t.bigint "user_id"
+    t.boolean "pay", default: false, null: false
+    t.string "message"
+    t.bigint "patient_id"
     t.bigint "psychologist_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["patient_id"], name: "index_appointments_on_patient_id"
     t.index ["psychologist_id"], name: "index_appointments_on_psychologist_id"
-    t.index ["user_id"], name: "index_appointments_on_user_id"
+  end
+
+  create_table "patients", force: :cascade do |t|
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_patients_on_user_id"
   end
 
   create_table "psychologists", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "password"
-    t.integer "age"
-    t.string "gender"
     t.string "description"
     t.string "professional_register"
     t.string "speciality"
+    t.money "price", scale: 2
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_psychologists_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -50,6 +56,8 @@ ActiveRecord::Schema.define(version: 2021_08_06_041307) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "appointments", "patients"
   add_foreign_key "appointments", "psychologists"
-  add_foreign_key "appointments", "users"
+  add_foreign_key "patients", "users"
+  add_foreign_key "psychologists", "users"
 end
