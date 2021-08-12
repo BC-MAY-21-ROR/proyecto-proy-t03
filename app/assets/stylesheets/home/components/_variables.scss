@@ -1,0 +1,11 @@
+$text-color: #0077B6;
+$breakpoint-desktop: 992px;
+
+@mixin desactivated_navbarMobile{
+  .navbar{
+    display: none;
+  }
+  .navbar-expand-lg .navbar-collapse{
+    display: none !important;
+  }
+}

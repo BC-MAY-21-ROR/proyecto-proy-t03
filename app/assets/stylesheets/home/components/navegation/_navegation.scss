@@ -1,0 +1,137 @@
+@import '../variables';
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(6, 117, 177, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); 
+}
+
+.navbar-light .navbar-toggler {
+  color: rgba(50, 135, 247, 0.55);
+  border-color: #fff;
+}
+.navbar-light .navbar-brand {
+  color: $text-color;
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link{
+  color: $text-color;
+}
+
+.logo{
+  width: 50px;
+  .logo-img{
+    width: 80%;
+  }
+
+  .logo-text{
+    color: $text-color;
+    font-size: 20px;
+    text-decoration: none;
+    padding-left: 10px;
+  }
+  
+  .logo-text{
+    display: none;
+  }
+}
+
+.navbar-light{
+
+  .navbar-nav{
+
+    .nav-link{
+      color: $text-color;
+      font-weight: bold;
+    }
+  } 
+}
+.navbar-nav{
+
+  .toolbar{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-weight: bold;
+
+    .toolbar-sign_up{
+      background-color: $text-color;
+      border-radius: 20px;
+      color: #fff;
+      padding: 4px 20px 4px 20px;
+    }
+  }
+}
+.nav-desktop{
+  display: none;
+}
+
+@media (min-width: $breakpoint-desktop){
+  @include desactivated_navbarMobile;
+  
+  .nav-desktop{
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    margin: 0 auto;
+    padding-top: 1rem;
+    width: 95%;
+    .nav-logo{
+      align-items: center;
+      display: flex;
+      gap: 1rem;
+      width: 15%;
+      .nav-logo_img{
+        margin-bottom: .5rem;
+        width: 20%;
+      }
+
+      .nav-logo_text{
+        color: $text-color;
+        font-size: 18px;
+      }
+    }
+
+    .nav-links{
+      border-bottom: 2px solid $text-color;
+      display: flex;
+      gap: 4rem;
+      text-decoration: none;
+
+      .nav-links_item{
+        color: $text-color;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: 0.5s;
+
+        &:hover{
+          color: rgb(0, 117, 250);
+        }
+      }
+    }
+  }
+
+  .nav-toolbar{
+    display: flex;
+    gap: 2rem;
+
+    .nav-toolbar_link, .nav-toolbar_button{
+      text-decoration: none;
+      font-size: 18px;
+    }
+    .nav-toolbar_link{
+      color: $text-color;
+      font-weight: bold;
+    }
+    .nav-toolbar_button{
+      background-color: $text-color;
+      border-radius: 35px;
+      color: #fff;
+      padding: 2px 8px;
+      transition: 0.5s;
+      &:hover{
+        background-color: rgb(19, 0, 129);
+      }
+    }
+  }
+}
