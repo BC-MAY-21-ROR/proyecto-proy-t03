@@ -8,31 +8,31 @@
 
 
   <div class="field">
-    <%= f.text_field :name, autofocus: true, autocomplete: "email",class: 'form_field',placeholder:"Full Name" %>
+    <%= f.text_field :name, autofocus: true, class: 'form_field',placeholder:"Full Name" %>
   </div>
   
    <div class="field">
-    <%= f.text_field :phone, autofocus: true, autocomplete: "email",class: 'form_field',placeholder:"Phone" %>
+    <%= f.text_field :phone,class: 'form_field', placeholder:"Phone" %>
   </div>
 
   <div class="field">
-    <%= f.text_field :country, autofocus: true, autocomplete: "email",class: 'form_field',placeholder:"Country", type:"select" %>
+    <%= f.text_field :country,class: 'form_field', placeholder:"Country", type:"select" %>
   </div>
 
   <div class="field">
-    <%= f.date_field :birth, autofocus: true, autocomplete: "email",class: 'form_field',placeholder:"Date of birth" ,type:"date" %>
+    <%= f.date_field :birth,class: 'form_field', placeholder:"Date of birth" , type:"date" %>
   </div>
 
   <div class="field">
-    <%= f.email_field :email, autofocus: true, autocomplete: "email",class: 'form_field',placeholder:"Email" %>
+    <%= f.email_field :email,autocomplete: "email", class: 'form_field', placeholder:"Email" %>
   </div>
 
   <div class="field">
-    <%= f.password_field :password, autocomplete: "new-password",class: 'form_field',placeholder:"Password "  %>
+    <%= f.password_field :password, class: 'form_field', placeholder:"Password "  %>
   </div>
 
   <div class="field">
-    <%= f.password_field :password_confirmation, autocomplete: "new-password",class: 'form_field',placeholder:"Confim password" %>
+    <%= f.password_field :password_confirmation, class: 'form_field',placeholder:"Confim password" %>
   </div>
 
   <div class="field">
