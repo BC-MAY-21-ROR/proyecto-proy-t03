@@ -20,8 +20,13 @@
         <a class="nav-item nav-link" href="faqs">FAQS</a>
         <a class="nav-item nav-link" href="#">Chat</a>
         <div class="toolbar">
-          <%= link_to "Sign In", root_path, class:"text-decoration-none"%>
-          <%= link_to "Sign Up", root_path, class:"toolbar-sign_up text-decoration-none"%>
+         <% if user_signed_in?%>
+          <%= link_to "Welcome", class:"text-decoration-none"%>
+          <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"toolbar-sign_up text-decoration-none"%>
+        <% else%>
+          <%= link_to "Sign In", new_user_session_path, class:"text-decoration-none"%>
+          <%= link_to "Sign Up", new_user_registration_path, class:"toolbar-sign_up text-decoration-none"%>
+          <% end %>
         </div>
       </div>
     </div>
@@ -42,10 +47,12 @@
   </div>
 
   <div class="nav-toolbar">
-  
-    <a href="#" class="nav-toolbar_link">Sign In</a>
-    <a href="#" class="nav-toolbar_button">Sign Up</a>
-
+      <% if user_signed_in?%>
+          <%= link_to "Welcome", current_user.email, class:"nav-toolbar_link"%>
+          <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"nav-toolbar_button"%>
+        <% else%>
+          <%= link_to "Sign In", new_user_session_path, class:"nav-toolbar_link" %>
+          <%= link_to "Sign Up", new_user_registration_path, class:"nav-toolbar_link" %>
+    <% end %>
   </div>
-
 </div>
