@@ -20,8 +20,8 @@
         <a class="nav-item nav-link" href="#">FAQS</a>
         <a class="nav-item nav-link" href="#">Chat</a>
         <div class="toolbar">
-          <%= link_to "Sign In", root_path, class:"text-decoration-none"%>
-          <%= link_to "Sign Up", root_path, class:"toolbar-sign_up text-decoration-none"%>
+          <%= link_to "Sign In", user_session_path, class:"text-decoration-none"%>
+          <%= link_to "Sign Up", new_user_registration_path, class:"toolbar-sign_up text-decoration-none"%>
         </div>
       </div>
     </div>
@@ -43,8 +43,8 @@
 
   <div class="nav-toolbar">
   
-    <a href="#" class="nav-toolbar_link">Sign In</a>
-    <a href="#" class="nav-toolbar_button">Sign Up</a>
+    <a href="/users/sign_in" class="nav-toolbar_link">Sign In</a>
+    <a href="/users/sign_up" class="nav-toolbar_button">Sign Up</a>
 
   </div>
 
