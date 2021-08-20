@@ -1,29 +1,56 @@
-<h2>Sign up</h2>
+<div class="register_container">
+<h2 class="hello_h2">Hello!</h2>
+<p>Create New account here. </p>
+
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
+
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.text_field :name, autofocus: true, autocomplete: "email",class: 'form_field',placeholder:"Full Name" %>
+  </div>
+  
+   <div class="field">
+    <%= f.text_field :phone, autofocus: true, autocomplete: "email",class: 'form_field',placeholder:"Phone" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.text_field :country, autofocus: true, autocomplete: "email",class: 'form_field',placeholder:"Country", type:"select" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.date_field :birth, autofocus: true, autocomplete: "email",class: 'form_field',placeholder:"Date of birth" ,type:"date" %>
+  </div>
+
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",class: 'form_field',placeholder:"Email" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "new-password",class: 'form_field',placeholder:"Password "  %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password",class: 'form_field',placeholder:"Confim password" %>
+  </div>
+
+  <div class="field">
+    <h4>Select yor gender</h4>
+    <%= f.radio_button(:gender?, "male") %>
+    <%=f.label(:gender?, "male", value: "male")%>
+    <%=f.radio_button(:gender?, "female")%>
+    <%=f.label(:gender?, "female", value: "female")%>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up" ,class: 'sign_up_btn' %>
   </div>
+
 <% end %>
 
-<%= render "devise/shared/links" %>
+<div class="links">
+<h3>Do you have an account?</h3>   <%= render "devise/shared/links" %>
+</div>
+
+</div>
