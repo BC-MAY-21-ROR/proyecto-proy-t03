@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  get '/:locale' => 'home#index'
   root 'home#index'
-  
-  get 'faqs', to: "home#faqs"
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  scope "/:locale" do
+    get 'faqs', to: "home#faqs"
   devise_for :users
+  end
 end
