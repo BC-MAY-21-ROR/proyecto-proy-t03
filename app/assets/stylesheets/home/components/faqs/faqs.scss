@@ -1,0 +1,40 @@
+@import '../variables';
+
+%flex-center {
+  display: flex;
+  flex-direction: column;
+}
+
+.faqs {
+  @extend %flex-center;
+  margin-top: 15px;
+
+  .faqs-text {
+    color: $text-color;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    p {
+      text-align: justify;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .faqs {
+    @extend %flex-center;
+    margin-top: 3rem;
+    margin-left: 18%;
+    margin-right: 18%;
+  
+    .faqs-text {
+      color: $text-color;
+      text-align: justify;
+      padding: 1%;
+
+      p {
+        font-size: 2vmin;
+      }
+    }
+  }
+}
