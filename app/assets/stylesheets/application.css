@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+ footer {
+  display: flex;
+  position: absolute;
+  margin-top: -17%;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+ @media (min-width: 992px) {
+  footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 30px;
+    width: 100%;
+  justify-content: space-evenly;
+  }
+ }
