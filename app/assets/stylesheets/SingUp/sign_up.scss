@@ -1,0 +1,78 @@
+@import "../home/components/variables";
+$button_background: #0077b6;
+$border_color: #000000;
+
+%flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin: 1rem auto;
+  text-align: left;
+}
+
+.register_container {
+  @extend %flex-center;
+  width: 75vw;
+
+  form {
+    @extend %flex-center;
+    align-items: center;
+    width: 100%;
+  }
+  .hello_h2 {
+    text-align: left;
+    font-size: 3rem;
+  }
+  .field {
+    width: 100%;
+  }
+  .form_field {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid $border_color;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0;
+  }
+  .sign_up_btn {
+    background-color: $button_background;
+    width: 100%;
+    border: none;
+    margin: 1rem 0;
+    border-radius: 25px;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.2rem 6rem;
+  }
+
+  .links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h3 {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .register_container {
+    @extend %flex-center;
+    width: 30vw;
+
+    form {
+      @extend %flex-center;
+      align-items: center;
+      width: 100%;
+    }
+    .hello_h2 {
+      text-align: left;
+    }
+    .field {
+      width: 100%;
+    }
+    .form_field {
+      width: 100%;
+    }
+  }
+}
