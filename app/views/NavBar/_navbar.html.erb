@@ -20,8 +20,9 @@
         <%= link_to t('faqs'), faqs_path, class:"nav-item nav-link"%>
         <a class="nav-item nav-link" href="#">Chat</a>
         <div class="toolbar">
-          <%= link_to t('sign_in') , root_path, class:"text-decoration-none"%>
-          <%= link_to t('sign_up'), root_path, class:"toolbar-sign_up text-decoration-none"%>
+  
+          <%= link_to t('sign_in') ,  user_session_path, class:"text-decoration-none"%>
+          <%= link_to t('sign_up'), new_user_registration_path, class:"toolbar-sign_up text-decoration-none"%>
         </div>
       </div>
     </div>
@@ -43,8 +44,9 @@
 
   <div class="nav-toolbar">
   
-    <a href="#" class="nav-toolbar_link"><%= t('sign_in') %></a>
-    <a href="#" class="nav-toolbar_button"><%= t('sign_up') %></a>
+    <%= link_to t('sign_in') ,  user_session_path, class:"nav-toolbar_link"%>
+    <%= link_to t('sign_up'), new_user_registration_path, class:"nav-toolbar_button"%>
+    
 
   </div>
 
