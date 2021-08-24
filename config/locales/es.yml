@@ -1,0 +1,30 @@
+es:
+  psycho: "Psicólogo"
+  prices: "Precios"
+  faqs: "Preguntas Frecuentes"
+  sign_up: "Registrarse"
+  sign_in: "Ingresar"
+  what_html: <h3>¿Qué es Let Me Help You?</h3>
+             <p>Let Me Help You es una plataforma de terapia psicológica en línea segura y asequible. <br>
+               Nuestra misión es ayudar a las personas a recuperar la estabilidad emocional que necesitan para su vida diaria.</p>
+  how_html: <h3>¿Cómo funciona?</h3>
+            <p>
+            En Let Me Help You puedes hablar de forma segura y privada con un psicólogo de confianza mediante videollamada, llamada o chat. <br>
+            Para tener una consulta en línea con uno de nuestros psicólogos, debe programar una cita con anticipación. <br>
+            La disponibilidad de horas varía según la agenda del psicólogo que selecciones. 
+            </p>
+  effective_html: <h3>¿Son efectivas las consultas en línea? </h3>
+                  <p>
+                  Las consultas en línea le permiten recibir la misma atención psicológica que recibiría en una oficina tradicional, pero de forma remota. <br>
+                  Puede hablar con su terapeuta por chat sin salir de casa. 
+                  </p>
+  payment_html: <h3>¿Cuándo se realiza el pago de la cita?</h3>
+                <p>
+                En el momento de programar tu cita deberás realizar el pago de la misma para que sea confirmada con tu psicólogo y puedas llevarla a cabo. 
+                </p>
+  long_html: <h3>¿Cuánto dura una cita?</h3>
+              <p>
+              Las citas duran 50 minutos. <br>
+              Es importante que ingrese a su cita a tiempo. Los tiempos de consulta han sido programados especialmente para ti, si llegas tarde a tu cita tendrá que ser más corta para respetar los horarios del resto de pacientes. <br>
+              Independientemente de la duración de su cita, se le cobrará en su totalidad. 
+              </p>
