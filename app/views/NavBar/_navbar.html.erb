@@ -9,20 +9,27 @@
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="logo">
       <%= image_tag("Let_Me_Help_You_Logo.png", alt: "Logo", class:"logo-img")%>
       <h2 class="logo-text">Let Me Help You</h2>
     </div>
+
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link" href="#"><%= t('psycho') %></a>
-        <a class="nav-item nav-link" href="#"><%= t('prices') %></a>
-        <%= link_to t('faqs'), faqs_path, class:"nav-item nav-link"%>
-        <a class="nav-item nav-link" href="#">Chat</a>
+        <%= link_to t('psycho'), nil, class: "nav-item nav-link"%>
+        <%= link_to t('prices'), nil, class: "nav-item nav-link"%> 
+        <%= link_to t('faqs'), faqs_path, class: "nav-item nav-link"%>
+        <%= link_to "Chat", nil, class: "nav-item nav-link"%>
+        
         <div class="toolbar">
-  
-          <%= link_to t('sign_in') ,  user_session_path, class:"text-decoration-none"%>
-          <%= link_to t('sign_up'), new_user_registration_path, class:"toolbar-sign_up text-decoration-none"%>
+        <% if user_signed_in?%>
+          <%= link_to t('My Profile'), nil, class:"text-decoration-none"%>
+          <%= link_to t('Sign Out'), destroy_user_session_path, method: :delete, class:"toolbar-sign_up text-decoration-none"%>
+        <% else%>
+          <%= link_to t('Sign In'), new_user_session_path, class:"text-decoration-none"%>
+          <%= link_to t('Sign Up'), new_user_registration_path, class:"toolbar-sign_up text-decoration-none"%>
+          <% end %>
         </div>
       </div>
     </div>
@@ -37,17 +44,18 @@
   </div>
 
   <div class="nav-links">
-    <a href="#" class="nav-links_item"><%= t('psycho') %></a>
-    <a href="#" class="nav-links_item"><%= t('prices') %></a>
+    <%= link_to t('psycho') , nil, class:"nav-links_item"%>
+    <%= link_to t('prices'), nil, class:"nav-links_item"%>
     <%= link_to t('faqs') , faqs_path, class:"nav-links_item"%>
   </div>
 
-  <div class="nav-toolbar">
-  
-    <%= link_to t('sign_in') ,  user_session_path, class:"nav-toolbar_link"%>
-    <%= link_to t('sign_up'), new_user_registration_path, class:"nav-toolbar_button"%>
-    
-
+ <div class="nav-toolbar">
+      <% if user_signed_in?%>
+          <%= link_to t('My Profile'), current_user.email, class:"nav-toolbar_link"%>
+          <%= link_to t('Sign Out'), destroy_user_session_path, method: :delete, class:"nav-toolbar_link"%>
+        <% else%>
+          <%= link_to t('Sign In'), new_user_session_path, class:"nav-toolbar_link" %>
+          <%= link_to t('Sign Up'), new_user_registration_path, class:"nav-toolbar_button" %>
+      <% end %>
   </div>
-
 </div>
