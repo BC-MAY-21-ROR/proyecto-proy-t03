@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_18_053905) do
+ActiveRecord::Schema.define(version: 2021_08_26_214107) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "appointments", force: :cascade do |t|
+  create_table "appointment", force: :cascade do |t|
     t.date "date"
     t.time "time"
     t.boolean "pay", default: false, null: false
@@ -24,43 +24,44 @@ ActiveRecord::Schema.define(version: 2021_08_18_053905) do
     t.bigint "psychologist_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["patient_id"], name: "index_appointments_on_patient_id"
-    t.index ["psychologist_id"], name: "index_appointments_on_psychologist_id"
+    t.index ["patient_id"], name: "index_appointment_on_patient_id"
+    t.index ["psychologist_id"], name: "index_appointment_on_psychologist_id"
   end
 
   create_table "patients", force: :cascade do |t|
-    t.bigint "user_id"
+    t.string "name"
+    t.string "gender"
+    t.string "phone"
+    t.string "country"
+    t.datetime "birth"
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_patients_on_user_id"
   end
 
   create_table "psychologists", force: :cascade do |t|
+    t.string "name"
+    t.string "gender"
+    t.string "phone"
+    t.string "country"
+    t.datetime "birth"
     t.string "description"
     t.string "professional_register"
     t.string "speciality"
     t.money "price", scale: 2
-    t.bigint "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_psychologists_on_user_id"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "name"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
-    t.integer "age"
-    t.string "gender"
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "phone"
-    t.string "country"
-    t.datetime "birth"
   end
 
-  add_foreign_key "appointments", "patients"
-  add_foreign_key "appointments", "psychologists"
-  add_foreign_key "patients", "users"
-  add_foreign_key "psychologists", "users"
+  add_foreign_key "appointment", "patients"
+  add_foreign_key "appointment", "psychologists"
 end

@@ -1,12 +1,12 @@
 @import '../variables';
 
-%flex-center {
-  display: flex;
-  flex-direction: column;
-}
+// %flex-center {
+//   display: flex;
+//   flex-direction: column;
+// }
 
 .faqs {
-  @extend %flex-center;
+  @include flex-column;
   margin-top: 15px;
 
   .faqs-text {
@@ -22,7 +22,7 @@
 
 @media (min-width: $breakpoint-desktop) {
   .faqs {
-    @extend %flex-center;
+    @include flex-column;
     margin-top: 3rem;
     margin-left: 18%;
     margin-right: 18%;

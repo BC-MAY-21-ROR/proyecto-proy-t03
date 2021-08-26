@@ -23,13 +23,16 @@
         <%= link_to "Chat", nil, class: "nav-item nav-link"%>
         
         <div class="toolbar">
-        <% if user_signed_in?%>
-          <%= link_to t('My Profile'), nil, class:"text-decoration-none"%>
-          <%= link_to t('Sign Out'), destroy_user_session_path, method: :delete, class:"toolbar-sign_up text-decoration-none"%>
-        <% else%>
-          <%= link_to t('Sign In'), new_user_session_path, class:"text-decoration-none"%>
-          <%= link_to t('Sign Up'), new_user_registration_path, class:"toolbar-sign_up text-decoration-none"%>
-          <% end %>
+        <% if patient_signed_in? %>
+          <%= link_to t('My Profile'), current_user.email, class:"text-decoration-none"%>
+          <%= link_to t('Sign Out'), destroy_patient_session_path, :method => :delete, class:"toolbar-sign_up text-decoration-none"%>
+        <% elsif psychologist_signed_in? %>
+          <%= link_to t('My Profile'), current_user.email, class:"text-decoration-none"%>
+          <%= link_to t('Sign Out'), destroy_psychologist_session_path, :method => :delete, class:"toolbar-sign_up text-decoration-none" %>
+        <% else %> 
+          <%= link_to t('Sign In'), type_path(commit: :sign_in), class:"text-decoration-none"%>
+          <%= link_to t('Sign Up'), type_path(commit: :sign_up), class:"toolbar-sign_up text-decoration-none"%>
+        <% end %>     
         </div>
       </div>
     </div>
@@ -50,12 +53,18 @@
   </div>
 
  <div class="nav-toolbar">
-      <% if user_signed_in?%>
-          <%= link_to t('My Profile'), current_user.email, class:"nav-toolbar_link"%>
-          <%= link_to t('Sign Out'), destroy_user_session_path, method: :delete, class:"nav-toolbar_link"%>
-        <% else%>
-          <%= link_to t('Sign In'), new_user_session_path, class:"nav-toolbar_link" %>
-          <%= link_to t('Sign Up'), new_user_registration_path, class:"nav-toolbar_button" %>
-      <% end %>
+    <% if patient_signed_in? %>
+      <%= link_to t('My Profile'), current_user.email, class:"nav-toolbar_link"%>
+      <%= link_to t('Sign Out'), destroy_patient_session_path, :method => :delete, class:"nav-toolbar_button"%>
+    <% elsif psychologist_signed_in? %>
+      <%= link_to t('My Profile'), current_user.email, class:"nav-toolbar_link"%>
+      <%= link_to t('Sign Out'), destroy_psychologist_session_path, :method => :delete, class:"nav-toolbar_button" %>
+    <% else %> 
+      <%= link_to t('Sign In'), type_path(commit: :sign_in), class:"nav-toolbar_link"%>
+      <%= link_to t('Sign Up'), type_path(commit: :sign_up), class:"nav-toolbar_button"%>
+    <% end %>
   </div>
 </div>
+
+<!--->
+
