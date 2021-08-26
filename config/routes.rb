@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   scope "/:locale" do
     get 'faqs', to: "home#faqs"
     match 'type', to: 'home#type', via: [:get, :post]
-    devise_for :psychologists
-    devise_for :patients
+    devise_for :psychologists, :controllers => { registrations: 'patient/registrations' }
+    devise_for :patients, :controllers => { registrations: 'psychologist/registrations' } 
   end
 end

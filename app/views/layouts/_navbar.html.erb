@@ -43,7 +43,7 @@
 <div class="nav-desktop">
   <div class="nav-logo">
     <%= image_tag("Let_Me_Help_You_Logo.png", alt: "Logo", class:"nav-logo_img")%>
-    <h2 class="nav-logo_text">Let Me Help You</h2>
+    <h2 class="nav-logo_text"><%= link_to "Let Me Help You", root_path, class:"text-decoration-none color"%></h2>
   </div>
 
   <div class="nav-links">
@@ -54,7 +54,7 @@
 
  <div class="nav-toolbar">
     <% if patient_signed_in? %>
-      <%= link_to t('My Profile'), current_user.email, class:"nav-toolbar_link"%>
+      <%= link_to t('My Profile'), patient_session_path, class:"nav-toolbar_link"%>
       <%= link_to t('Sign Out'), destroy_patient_session_path, :method => :delete, class:"nav-toolbar_button"%>
     <% elsif psychologist_signed_in? %>
       <%= link_to t('My Profile'), current_user.email, class:"nav-toolbar_link"%>
