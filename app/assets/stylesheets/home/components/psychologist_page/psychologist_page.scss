@@ -1,0 +1,109 @@
+@import '../variables';
+
+.psychologist-info{
+  align-items: center;
+  @include flex-column;
+
+  .psychologist-info-top{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    .psychologist-info_img{
+      border: 1px solid blue;
+      border-radius: 95px;
+      margin: 20px 0;
+      width: 50%;
+    }
+  
+    .psychologist-info-about{
+      border: 3px solid #C6E0EF;
+      border-radius: 20px;
+      color: $text-color;
+      padding: 10px;
+      margin-bottom: 20px;
+      width: 85%;
+  
+      .psychologist-info-about_muted{
+        font-weight: normal;
+      }
+  
+      p{
+        color: #000; 
+        font-weight: bold;
+      }
+  
+      .psychologist-info-about_txtarea{
+        background-color: #66C0DD;
+        border-radius: 20px;
+        height: 200px;
+        margin: 20px 0;
+      }
+    }
+  }
+  
+  .psychologist-info-profesional{
+    background-color: #66C0DD;
+    border-radius: 20px;
+    color: #fff;
+    margin-bottom: 20px;
+    padding: 30px 30px;
+    width: 85%;
+
+    .psychologist-info-profesional_text{
+      margin-bottom: 30px;
+    }
+
+    span{
+      font-weight: bold;
+    }
+  }
+}
+
+@media(min-width: $breakpoint-desktop){
+  .psychologist-info{
+    position: inherit;
+    height: 50vh;
+
+    .psychologist-info-top{
+      flex-direction: row;
+      gap: 70px;
+      margin-top: 30px;
+
+      .psychologist-info_img{
+        border-radius: 150px;
+        margin-bottom: 470px;
+        width: 15%;
+      }
+
+      .psychologist-info-about{
+        height: 650px;
+        padding: 20px 25px;
+
+        .top{
+          margin-top: 40px;
+        }
+
+        .psychologist-info-about_txtarea{
+          margin-bottom: 40px;
+        }
+      }
+    }
+
+    .psychologist-info-profesional{
+      bottom: 450px;
+      display: block;
+      position: relative;
+      right: 545px;
+      width: 12%;
+    }
+
+    .buton_edit{
+      bottom: 450px;
+      display: block;
+      @include button(5px, 30px, $text-color, #fff);
+      position: relative;
+      right: 550px;
+    }
+  }
+}

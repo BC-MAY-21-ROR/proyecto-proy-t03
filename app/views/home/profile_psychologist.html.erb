@@ -1,1 +1,45 @@
-<h1>Muñaño</h1>
+<div class="container-fluid">
+  <section class="psychologist-info">
+    <div class="psychologist-info-top">
+      <%= image_tag("user.svg", alt: "User img", class:"psychologist-info_img")%>
+      <div class="psychologist-info-about">
+        <h1 class="psychologist-info-about_muted mb-4 mt-2"><%= current_psychologist.name %></h1>
+        <h2 class="psychologist-info-about_muted top">About me</h2>
+        <div class="psychologist-info-about_txtarea">
+          <%= current_psychologist.description %>
+        </div>
+        <h2 class="fw-bolde">Specialitites</h2>
+        <p class="btn btn-primary text-white mt-4"><%= current_psychologist.speciality %></p>
+      </div>
+    </div>
+
+    <div class="psychologist-info-profesional">
+      <p class="psychologist-info-profesional_text"> 
+        <span>Age:</span>
+        <%= age(current_psychologist) %>
+      </p>
+
+      <p class="psychologist-info-profesional_text">
+        <span>Country:</span>
+        <%= current_psychologist.country %>
+      </p>
+
+      <p class="psychologist-info-profesional_text">
+        <span>Phone:</span>
+        <%= current_psychologist.phone %>
+      </p>
+
+      <p class="psychologist-info-profesional_text">
+        <span>Email:</span>
+        <%= current_psychologist.email %>
+      </p>
+
+      <p class="psychologist-info-profesional_text">
+        <span>Professional Register:</span> <br>
+        <%= current_psychologist.professional_register %>
+      </p>
+    </div>
+
+    <%= link_to t("Edit Profile"), edit_psychologist_registration_path, class:"buton_edit mb-2"%>
+  </section>
+</div>
