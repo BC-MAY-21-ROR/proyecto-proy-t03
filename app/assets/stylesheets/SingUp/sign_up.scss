@@ -70,6 +70,12 @@ $border_color: #000000;
     }
     .field {
       width: 100%;
+
+      .flexbox{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
     }
     .form_field {
       width: 100%;

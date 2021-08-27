@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     match 'type', to: 'home#type', via: [:get, :post]
     devise_for :psychologists, :controllers => { registrations: 'patient/registrations' }
     devise_for :patients, :controllers => { registrations: 'psychologist/registrations' } 
+    get 'profile_psychologist', to: "home#profile_psychologist"
   end
 end

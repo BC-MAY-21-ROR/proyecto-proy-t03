@@ -4,4 +4,7 @@ class HomeController < ApplicationController
   def type;end
 
   def faqs; end
+
+  def profile_psychologist; end
+  
 end

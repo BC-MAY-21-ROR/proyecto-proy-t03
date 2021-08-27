@@ -34,21 +34,43 @@
     </div>
 
     <div class="field">
+      <%= f.text_field :price, class:"form_field", placeholder: "Price" %>
+    </div>
+
+    <div class="field">
+      <%= f.text_field :speciality, class:"form_field", placeholder: "Speciality" %>
+    </div>
+
+    <div class="field">
+      <%= f.text_field :professional_register, class:"form_field", placeholder: "Professional Register" %>
+    </div>
+
+
+    <div class="field mt-2 mb-2">
       <h4>Select yor gender</h4>
-      <%= f.radio_button(:gender, "male") %>
-      <%=f.label(:gender, "male", value: "male")%>
-      <%=f.radio_button(:gender, "female")%>
-      <%=f.label(:gender, "female", value: "female")%>
+      <div class="flexbox">
+        <div class="male">
+          <%= f.radio_button(:gender, "male") %>
+          <%= f.label(:gender, "Male", value: "male")%>
+        </div>
+        <div class="female">
+          <%= f.radio_button(:gender, "female") %>
+          <%= f.label(:gender, "Female", value: "female")%>
+        </div>
+        <div class="binary">
+          <%= f.radio_button(:gender, "Non-Binary") %>
+          <%= f.label(:gender, "Non-Binary", value: "non-binary")%>
+        </div>
+      </div>
     </div>
 
     <div class="actions">
       <%= f.submit "Sign up" ,class: 'sign_up_btn' %>
     </div>
-
   <% end %>
 
   <div class="links">
-  <h3>Do you have an account?</h3>  <%= render "psychologists/shared/links" %>
+    <h3>Do you have an account?</h3>  <%= render "psychologists/shared/links" %>
   </div>
 
 </div>
