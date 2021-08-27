@@ -6,6 +6,14 @@ $breakpoint-desktop: 992px;
   flex-direction: column;
 }
 
+@mixin button($ptop, $pbot, $bgcolor, $color){
+  background-color: $bgcolor;
+  color: $color;
+  text-decoration: none;
+  padding: $ptop $pbot;
+  border-radius: 20px;
+}
+
 @mixin desactivated_navbarMobile{
   .navbar{
     display: none;

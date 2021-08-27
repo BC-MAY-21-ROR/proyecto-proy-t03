@@ -19,13 +19,16 @@ $border_color: #000000;
     align-items: center;
     width: 100%;
   }
+
   .hello_h2 {
     text-align: left;
     font-size: 3rem;
   }
+
   .field {
     width: 100%;
   }
+
   .form_field {
     width: 100%;
     border: none;
@@ -33,6 +36,7 @@ $border_color: #000000;
     margin: 0.5rem 0;
     padding: 0.5rem 0;
   }
+
   .sign_up_btn {
     background-color: $button_background;
     width: 100%;
@@ -65,9 +69,11 @@ $border_color: #000000;
       align-items: center;
       width: 100%;
     }
+
     .hello_h2 {
       text-align: left;
     }
+    
     .field {
       width: 100%;
 
@@ -77,6 +83,7 @@ $border_color: #000000;
         gap: 2rem;
       }
     }
+
     .form_field {
       width: 100%;
     }
