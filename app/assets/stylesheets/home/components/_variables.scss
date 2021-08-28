@@ -1,7 +1,7 @@
 $text-color: #0077B6;
 $breakpoint-desktop: 992px;
 
-@mixin flex-column{
+%flex-column{
   display: flex;
   flex-direction: column;
 }

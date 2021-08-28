@@ -1,8 +1,8 @@
 @import '../variables';
 
 .psychologist-info{
+  @extend %flex-column;
   align-items: center;
-  @include flex-column;
 
   .psychologist-info-top{
     align-items: center;
@@ -99,9 +99,9 @@
     }
 
     .buton_edit{
+      @include button(5px, 30px, $text-color, #fff);
       bottom: 450px;
       display: block;
-      @include button(5px, 30px, $text-color, #fff);
       position: relative;
       right: 550px;
     }
