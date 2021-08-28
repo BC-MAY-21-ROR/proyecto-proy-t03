@@ -14,7 +14,7 @@
   text-align: center;
 
   .type-buttons-psychologist{
-    @include flex-column;
+    @extend %flex-column;
 
     .type-buttons-psychologist_img{
       width: 70%;
@@ -22,7 +22,7 @@
   }
 
   .type.type-buttons-patient{
-    @include flex-column;
+    @extend %flex-column;
   }
 }
 
