@@ -1,9 +1,17 @@
 $text-color: #0077B6;
 $breakpoint-desktop: 992px;
 
-@mixin flex-column{
+%flex-column{
   display: flex;
   flex-direction: column;
+}
+
+@mixin button($ptop, $pbot, $bgcolor, $color){
+  background-color: $bgcolor;
+  color: $color;
+  text-decoration: none;
+  padding: $ptop $pbot;
+  border-radius: 20px;
 }
 
 @mixin desactivated_navbarMobile{
