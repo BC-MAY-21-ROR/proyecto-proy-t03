@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <section class="patient-info">
+    <div class="patient-info-top">
+      <%= image_tag("user.svg", alt: "User img", class:"patient-info_img")%>
+      <div class="patient-info-about">
+        <h1 class="patient-info-about_muted mb-4 mt-2"><%= current_patient.name %></h1>
+        <h2 class="patient-info-about_muted top">About me</h2>
+        <div class="patient-info-about_txtarea">
+          <%= current_patient.description %>
+        </div>
+      </div>
+    </div>
+
+    <div class="patient-info-profesional">
+      <p class="patient-info-profesional_text"> 
+        <span>Age:</span>
+        <%= age(current_patient) %>
+      </p>
+
+      <p class="patient-info-profesional_text">
+        <span>Country:</span>
+        <%= current_patient.country %>
+      </p>
+
+      <p class="patient-info-profesional_text">
+        <span>Phone:</span>
+        <%= current_patient.phone %>
+      </p>
+
+      <p class="patient-info-profesional_text">
+        <span>Email:</span>
+        <%= current_patient.email %>
+      </p>
+    </div>
+
+    <%= link_to t("Edit Profile"), edit_patient_registration_path, class:"buton_edit mb-2"%>
+  </section>
+</div>
