@@ -1,0 +1,70 @@
+<!-- NAVBAR MOBILE -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <button class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse" 
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" 
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="logo">
+      <%= image_tag("Let_Me_Help_You_Logo.png", alt: "Logo", class:"logo-img")%>
+      <h2 class="logo-text">Let Me Help You</h2>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <%= link_to t('psycho'), nil, class: "nav-item nav-link"%>
+        <%= link_to t('prices'), nil, class: "nav-item nav-link"%> 
+        <%= link_to t('faqs'), faqs_path, class: "nav-item nav-link"%>
+        <%= link_to "Chat", nil, class: "nav-item nav-link"%>
+        
+        <div class="toolbar">
+        <% if patient_signed_in? %>
+          <%= link_to t('My Profile'), current_patient.email, class:"text-decoration-none"%>
+          <%= link_to t('Sign Out'), destroy_patient_session_path, :method => :delete, class:"toolbar-sign_up text-decoration-none"%>
+        <% elsif psychologist_signed_in? %>
+          <%= link_to t('My Profile'), profile_psychologist_path, class:"text-decoration-none"%>
+          <%= link_to t('Sign Out'), destroy_psychologist_session_path, :method => :delete, class:"toolbar-sign_up text-decoration-none" %>
+        <% else %> 
+          <%= link_to t('Sign In'), type_path(commit: :sign_in), class:"text-decoration-none"%>
+          <%= link_to t('Sign Up'), type_path(commit: :sign_up), class:"toolbar-sign_up text-decoration-none"%>
+        <% end %>     
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Navbar Desktop -->
+<div class="nav-desktop">
+  <div class="nav-logo">
+    <%= image_tag("Let_Me_Help_You_Logo.png", alt: "Logo", class:"nav-logo_img")%>
+    <h2 class="nav-logo_text"><%= link_to "Let Me Help You", root_path, class:"text-decoration-none color"%></h2>
+  </div>
+
+  <div class="nav-links">
+    <%= link_to t('psycho') , nil, class:"nav-links_item"%>
+    <%= link_to t('prices'), nil, class:"nav-links_item"%>
+    <%= link_to t('faqs') , faqs_path, class:"nav-links_item"%>
+  </div>
+
+ <div class="nav-toolbar">
+    <% if patient_signed_in? %>
+      <%= link_to t('My Profile'), current_patient.email, class:"nav-toolbar_link"%>
+      <%= link_to t('Sign Out'), destroy_patient_session_path, :method => :delete, class:"nav-toolbar_button"%>
+    <% elsif psychologist_signed_in? %>
+      <%= link_to t('My Profile'), profile_psychologist_path, class:"nav-toolbar_link"%>
+      <%= link_to t('Sign Out'), destroy_psychologist_session_path, :method => :delete, class:"nav-toolbar_button" %>
+    <% else %> 
+      <%= link_to t('Sign In'), type_path(commit: :sign_in), class:"nav-toolbar_link"%>
+      <%= link_to t('Sign Up'), type_path(commit: :sign_up), class:"nav-toolbar_button"%>
+    <% end %>
+  </div>
+</div>
+
+<!--->
+

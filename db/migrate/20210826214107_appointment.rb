@@ -1,6 +1,6 @@
-class Appointments < ActiveRecord::Migration[6.1]
+class Appointment < ActiveRecord::Migration[6.1]
   def change
-    create_table :appointments do |t|
+    create_table :appointment do |t|
       t.date :date
       t.time :time
       t.boolean :pay, null: false, default: false

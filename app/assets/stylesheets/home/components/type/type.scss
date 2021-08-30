@@ -1,0 +1,49 @@
+@import '../variables';
+
+.type-info{
+  margin: 20px 0;
+
+  .type-info_text{
+    text-align: center;
+    font-size: 40px;
+  }
+}
+
+.type-buttons{
+  margin: 0 auto;
+  text-align: center;
+
+  .type-buttons-psychologist{
+    @extend %flex-column;
+
+    .type-buttons-psychologist_img{
+      width: 70%;
+    }
+  }
+
+  .type.type-buttons-patient{
+    @extend %flex-column;
+  }
+}
+
+@media (min-width: $breakpoint-desktop){
+    .type-buttons{
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      margin-top: 50px;
+      .type-buttons-psychologist{
+        width: 80%;
+      }
+
+      .type-buttons-patient{
+        width: 65%;
+        height: 425px;
+
+        .img-fluid{
+          width: 75%;
+        }
+      }
+    }
+}

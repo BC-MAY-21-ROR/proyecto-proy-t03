@@ -1,5 +1,10 @@
 class HomeController < ApplicationController
   def index; end
 
+  def type;end
+
   def faqs; end
+
+  def profile_psychologist; end
+  
 end
