@@ -24,8 +24,8 @@
                     "Tell us something about you!", 
                     class:"form-label mt-3 psychologist-edit_label fs-5"%>
         <%= f.text_area :description, 
-                        :cols => 40, 
-                        :rows => 5, 
+                        cols: 40, 
+                        rows: 5, 
                         class:"form-control psychologist-edit_field"%>
       </div>
 
@@ -44,13 +44,15 @@
         <%= f.label :current_password, class:"form-label psychologist-edit_label"%> 
         <%= f.password_field :current_password, class: "form-control psychologist-edit_field" %>
       </div>
-    </section>
+    
 
     <div class="toolbar">
       <%= f.submit "Save", class:"toolbar_update" %>
       <%= link_to "Cancel", profile_psychologist_path, class:" btn toolbar_back"%>
     </div>
-  <% end %>
+
+    <% end %>
+  </section>
   <div class="delete-account mb-3">
     <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class:" btn btn-danger delete-account_button" %>
   </div>
