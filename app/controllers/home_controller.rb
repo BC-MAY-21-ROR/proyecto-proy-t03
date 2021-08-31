@@ -7,4 +7,6 @@ class HomeController < ApplicationController
 
   def profile_psychologist; end
   
+  def profile_patient; end
+  
 end
