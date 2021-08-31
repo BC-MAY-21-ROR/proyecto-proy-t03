@@ -14,12 +14,6 @@ class Psychologist::RegistrationsController < Devise::RegistrationsController
 
   protected
 
-  def after_update_path_for(profile_psychologist)
-    puts 'this is happening yoyo mama'
-    flash[:notice] = "Account succesfully updated"
-     psychologist_path
-  end
-
   def configure_sign_up_params
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :gender, :phone, :country, :birth, :description, :professional_register, :speciality, :price])
   end

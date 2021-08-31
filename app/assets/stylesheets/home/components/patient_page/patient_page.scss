@@ -1,0 +1,113 @@
+@import '../variables';
+
+.patient-info{
+  @extend %flex-column;
+  align-items: center;
+
+  .patient-info-top{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    .patient-info_img{
+      border: 1px solid blue;
+      border-radius: 95px;
+      margin: 20px 0;
+      width: 50%;
+    }
+  
+    .patient-info-about{
+      border: 3px solid #C6E0EF;
+      border-radius: 20px;
+      color: $text-color;
+      padding: 10px;
+      margin-bottom: 20px;
+      width: 85%;
+  
+      .patient-info-about_muted{
+        font-weight: normal;
+      }
+  
+      p{
+        color: #000; 
+        font-weight: bold;
+      }
+  
+      .patient-info-about_txtarea{
+        background-color: #66C0DD;
+        border-radius: 20px;
+        height: 200px;
+        margin: 20px 0;
+      }
+    }
+  }
+  
+  .patient-info-profesional{
+    background-color: #66C0DD;
+    border-radius: 20px;
+    color: #fff;
+    margin-bottom: 20px;
+    padding: 30px 30px;
+    width: 85%;
+
+    .patient-info-profesional_text{
+      margin-bottom: 30px;
+    }
+
+    span{
+      font-weight: bold;
+    }
+  }
+  
+  .buton_edit{
+    @include button(5px, 30px, $text-color, #fff);
+    display: block;
+  }
+}
+
+@media(min-width: $breakpoint-desktop){
+  .patient-info{
+    position: inherit;
+    height: 50vh;
+
+    .patient-info-top{
+      flex-direction: row;
+      gap: 70px;
+      margin-top: 30px;
+
+      .patient-info_img{
+        border-radius: 150px;
+        margin-bottom: 470px;
+        width: 15%;
+      }
+
+      .patient-info-about{
+        height: 650px;
+        padding: 20px 25px;
+
+        .top{
+          margin-top: 40px;
+        }
+
+        .patient-info-about_txtarea{
+          margin-bottom: 40px;
+        }
+      }
+    }
+
+    .patient-info-profesional{
+      bottom: 450px;
+      display: block;
+      position: relative;
+      right: 27.5vw;
+      width: 12%;
+    }
+
+    .buton_edit{
+      bottom: 450px;
+      position: relative;
+      right: 27.5vw;
+    }
+    
+  }
+}

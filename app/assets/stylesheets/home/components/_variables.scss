@@ -7,11 +7,11 @@ $breakpoint-desktop: 992px;
   flex-direction: column;
 }
 
-@mixin button($ptop_bot, $pleft_right, $bgcolor, $color){
+@mixin button($padding_top_and_bot, $padding_left_and_right, $bgcolor, $color-text){
   background-color: $bgcolor;
-  color: $color;
+  color: $color-text;
   text-decoration: none;
-  padding: $ptop_bot $pleft_right;
+  padding: $padding_top_and_bot $padding_left_and_right;
   border-radius: 20px;
 }
 
