@@ -3,11 +3,17 @@
     <div class="psychologist-info-top">
       <%= image_tag("user.svg", alt: "User img", class:"psychologist-info_img")%>
       <div class="psychologist-info-about">
-        <h1 class="psychologist-info-about_muted mb-4 mt-2"><%= current_psychologist.name %></h1>
+        <h1 class="psychologist-info-about_muted-head mb-4 mt-2"><%= current_psychologist.name %></h1>
         <h2 class="psychologist-info-about_muted top">About me</h2>
-        <div class="psychologist-info-about_txtarea">
-          <%= current_psychologist.description %>
-        </div>
+          <% if !current_psychologist.description %>
+            <div class="psychologist-info-about_textarea_alone"></div>
+          <% else %>
+            <div class="psychologist-info-about_txtarea text-wrap">
+              <p class="psychologist-info-about_txtarea-text">
+               <%= current_psychologist.description %>
+              </p>
+            </div>
+          <% end %> 
         <h2 class="fw-bolde">Specialitites</h2>
         <p class="btn btn-primary text-white mt-4"><%= current_psychologist.speciality %></p>
       </div>

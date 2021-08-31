@@ -32,12 +32,23 @@
         color: #000; 
         font-weight: bold;
       }
-  
-      .psychologist-info-about_txtarea{
+      
+      &_textarea_alone{
         background-color: #66C0DD;
         border-radius: 20px;
         height: 200px;
+      }
+
+      .psychologist-info-about_txtarea{
+        background-color: #66C0DD;
+        border-radius: 20px;
+        height: auto;
         margin: 20px 0;
+        padding: 5px;
+
+        &-text{
+          font-size: 18px;
+        }
       }
     }
   }
@@ -58,17 +69,22 @@
       font-weight: bold;
     }
   }
+
+  .buton_edit{
+    @include button(5px, 30px, $text-color, #fff);
+  }
 }
 
 @media(min-width: $breakpoint-desktop){
   .psychologist-info{
     position: inherit;
-    height: 50vh;
+    height: 80vh;
 
     .psychologist-info-top{
       flex-direction: row;
       gap: 70px;
       margin-top: 30px;
+      width: 70%;
 
       .psychologist-info_img{
         border-radius: 150px;
@@ -78,14 +94,28 @@
 
       .psychologist-info-about{
         height: 650px;
-        padding: 20px 25px;
-
+        padding: 50px 25px;
+        
         .top{
           margin-top: 40px;
         }
 
-        .psychologist-info-about_txtarea{
-          margin-bottom: 40px;
+        &_txtarea{
+          padding: 20px;
+          margin-bottom: 20px;
+          width: 70%;
+
+          &-text{
+            padding: 4px;
+          }
+        }
+
+        &_textarea-text{
+          font-size: 20px;
+        }
+
+        &_muted-head{
+          font-size: 60px;
         }
       }
     }
@@ -94,7 +124,7 @@
       bottom: 450px;
       display: block;
       position: relative;
-      right: 545px;
+      right: 555px;
       width: 12%;
     }
 
@@ -103,7 +133,7 @@
       bottom: 450px;
       display: block;
       position: relative;
-      right: 550px;
+      right: 563px;
     }
   }
 }
