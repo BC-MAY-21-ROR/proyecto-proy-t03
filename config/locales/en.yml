@@ -36,6 +36,9 @@ en:
   faqs: "FAQS"
   sign_up: "Sign Up"
   sign_in: "Sign In"
+  sign_out: "Sing Out"
+  my_profile: "My Profile"
+  
   what_html: <h3>What is Let Me Help You?</h3>
              <p>Terapify is a safe and affordable online psychological therapy platform. <br>
                 Our mission is to help people regain the emotional stability they need for their daily lives.</p>

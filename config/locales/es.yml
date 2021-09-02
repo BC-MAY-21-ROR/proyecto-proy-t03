@@ -4,6 +4,9 @@ es:
   faqs: "Preguntas Frecuentes"
   sign_up: "Registrarse"
   sign_in: "Ingresar"
+  sign_out: "Cerrar Sesión"
+  my_profile: "Mi Perfil"
+  
   what_html: <h3>¿Qué es Let Me Help You?</h3>
              <p>Let Me Help You es una plataforma de terapia psicológica en línea segura y asequible. <br>
                Nuestra misión es ayudar a las personas a recuperar la estabilidad emocional que necesitan para su vida diaria.</p>
