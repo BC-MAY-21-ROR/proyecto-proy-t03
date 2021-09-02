@@ -30,6 +30,7 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+#NAVBAR
   hello: "Hello world"
   psycho: "Psychologist"
   prices: "Prices"
@@ -38,7 +39,7 @@ en:
   sign_in: "Sign In"
   sign_out: "Sing Out"
   my_profile: "My Profile"
-  
+#FAQS  
   what_html: <h3>What is Let Me Help You?</h3>
              <p>Terapify is a safe and affordable online psychological therapy platform. <br>
                 Our mission is to help people regain the emotional stability they need for their daily lives.</p>
@@ -63,3 +64,14 @@ en:
               It is important that you enter your appointment on time. The consultation times have been programmed especially for you, if you are late for your appointment, it will have to be shorter to respect the schedules of the other patients. <br>
               Regardless of the duration of your appointment, it will be charged in full. 
               </p>
+#PRICES
+  prices_text_head: "Going to therapy is a life-changing process"
+  prices_text2: "Schedule 4 appointments and get a discount when making your payment"
+  ind_appointment: "Individual appointment"
+  text_box_prices1: "1 appointment by video call of 50 min. for 1 person"
+  cou_appointment: "Couple Appointment"
+  text_box_prices2: "1 appointment by video call of 50 min. for 2 persons"
+  pack_appointment: "Appointment Package"
+  text_box_prices3: "4 appointments per video call of 50 min. up to 2 people"
+  price_button: "I want to start"
+

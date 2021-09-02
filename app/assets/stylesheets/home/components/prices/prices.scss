@@ -1,0 +1,119 @@
+@import "../variables";
+
+.prices-head {
+  @extend %flex-column;
+  margin-top: 60px;
+}
+.prices-text {
+  font-size: 60px;
+  color: $text-color;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+  p {
+    font-size: 20px;
+  }
+}
+
+.prices-table {
+  display: inline-block;
+  width: 100%;
+  margin-top: 50px;
+}
+
+/*Boxes*/
+.prices-box {
+  display: inline-block;
+  background-color: #f3f3f3;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  box-shadow: 0px 2px 5px rgb(107, 106, 106);
+}
+
+@media screen and (min-width: 768px) {
+  .prices-box {
+    width: 32%;
+    float: left;
+    margin-right: 2%;
+  }
+  .prices-box:last-child {
+    margin-right: 0;
+  }
+}
+
+/*Headers*/
+.prices-col-header {
+  background-color: #0077b6;
+  padding: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.prices-box:nth-child(2) .prices-col-header {
+  background-color: #0077b6;
+}
+
+.prices-col-header h3 {
+  color: #f3f3f3;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.prices-col-header p {
+  text-align: center;
+  color: #f3f3f3;
+  font-size: 25px;
+  margin-bottom: 0;
+}
+
+/*Features*/
+.prices-col-features {
+  padding: 0 20px 20px 20px;
+}
+
+.prices-col-features p {
+  font-size: 20px;
+  padding: 20px 0;
+  margin: 0;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+.prices-col-features p:first-child,
+.prices-col-features p:last-child {
+  border-top: none;
+}
+
+/*Buy*/
+.prices-col-buy {
+  padding: 10px;
+  max-width: 250px;
+  text-align: center;
+  background-color: #7aebc1;
+  margin: 0 auto 20px;
+  border-radius: 10px;
+  border: 2px solid #7aebc1;
+  transition: all 0.3s;
+}
+
+.prices-col-buy a {
+  color: #f3f3f3;
+  padding: 10px;
+  font-size: 20px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.prices-col-buy:hover {
+  background-color: #f3f3f3;
+  transition: all 0.3s;
+}
+
+.prices-col-buy:hover a {
+  color: #7aebc1;
+  transition: all 0.3s;
+}
