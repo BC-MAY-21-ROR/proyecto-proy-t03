@@ -1,0 +1,112 @@
+@import '../home/components/variables';
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    .profile_picture{
+        text-align: center;
+        flex-basis: 100%;
+        .patient-info_img{
+            border-radius: 95px;
+            margin: 20px 0;
+            width: 160px;
+        }
+    }
+    
+    .patient-edit{
+        @extend %flex-column;
+        align-items: center;
+        margin: 20px 0;
+        padding: 20px;
+        &_field{
+            background-color: #66C0DD;
+            border-radius: 15px;
+            font-weight: bold;
+        }
+
+        &_img{
+            width: 50%;
+            margin-left: 45px;
+        }
+
+        .info-text{
+            font-size: 13px;
+            font-weight: bold;
+            margin: 0;
+            margin-top: 15px;
+            padding-left: 10px;
+        }
+
+        &_label{
+            color: $text-color;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding-left: 5px;
+        }
+    }
+    
+}
+
+.toolbar{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1.5rem 0 .5rem 0;
+  &_update{
+    background-color: $text-color;
+    border: none;
+    border-radius: 20px;
+    color: $white;
+    font-size: 18px;
+    padding: 4px 45px;
+    transition: 0.5s;
+    
+    &:hover{
+      background-color: rgb(11, 11, 141);
+    }
+  }
+
+  &_back{
+    background-color: #CCEAF3;
+    color: $text-color;
+    font-weight: bolder;
+    padding: 4px 40px;
+  }
+}
+
+.delete-account{
+  text-align: center;
+}
+
+@media(min-width: $breakpoint-desktop){
+    .container{
+        flex-direction: row;
+        align-content: 	stretch;
+        justify-content: flex-start;
+        .profile_picture{
+            padding: 20px;
+            flex-basis: auto;
+            width: 30%;
+            text-align: right;
+        }
+        .patient-edit{
+            flex-direction: row;
+            margin-top: 0;
+            width: 70%;
+            &_img{
+            margin-bottom: 30px;
+            width: 20%;
+            }
+        }
+
+        .toolbar{
+            gap: 3rem;
+            justify-content: center;
+        }
+
+        .delete-account{
+            align-items: center;
+        }
+    }
+}

@@ -1,66 +1,73 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="container">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "patients/shared/error_messages", resource: resource %>
+  <section class="profile_picture">
+    <%= image_tag("user.svg", alt: "User img", class:"patient-info_img")%>
+  </section>
+  
+  <section class="patient-edit">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= render "patients/shared/error_messages", resource: resource %>
 
-  <div class="form-group patient-edit_form">
-    <%= f.label :name, class: "form-label patient-edit_label" %><br />
-    <%= f.email_field :name, autofocus: true, autocomplete: "name" , class: "form-label patient-edit_label" %>
-  </div>
+      <div class="form-group patient-edit_form">
+        <%= f.label :name, class: "form-label patient-edit_label" %><br />
+        <%= f.email_field :name, autofocus: true, autocomplete: "name" , class: "form-control patient-edit_field" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :email, class: "form-label patient-edit_label" %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-label patient-edit_label" %>
-  </div>
+      <div class="form-group">
+        <%= f.label :email, class: "form-label patient-edit_label" %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control patient-edit_field" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :birth, class: "form-label patient-edit_label" %><br />
-    <%= f.date_field :birth, autofocus: true, autocomplete: "birth", class: "form-label patient-edit_label" %>
-  </div>
+      <div class="form-group">
+        <%= f.label :birth, class: "form-label patient-edit_label" %><br />
+        <%= f.date_field :birth, autofocus: true, autocomplete: "birth", class: "form-control patient-edit_field" %>
+      </div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
 
-  <div class="form-group">
-        <%= f.label :description, 
-                    "Tell us something about you!", 
-                    class:"form-label mt-3 patient-edit_label fs-5"%>
-        <%= f.text_area :description, cols: 40, rows: 5, class:"form-control patient-edit_label"%>
-  </div>
+      <div class="form-group">
+            <%= f.label :description, "Tell us something about you!", class:"form-label mt-3 patient-edit_label fs-5"%>
+            <%= f.text_area :description, cols: 40, rows: 5, class:"form-control patient-edit_field"%>
+      </div>
 
-  <div class="field">
-    <%= f.label :phone, class: "form-label patient-edit_label" %><br />
-    <%= f.text_field :phone, autofocus: true, autocomplete: "phone", class: "form-label patient-edit_label" %>
-  </div>
+      <div class="form-group">
+        <%= f.label :phone, class: "form-label patient-edit_label" %><br />
+        <%= f.text_field :phone, autofocus: true, autocomplete: "phone", class: "form-control patient-edit_field" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :password, class: "form-label patient-edit_label" %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password", class: "form-label patient-edit_label"  %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
+      <div class="form-group mt-2">
+        <%= f.label :password, class: "form-label patient-edit_label" %><br /> <i>(leave blank if you don't want to change it)</i><br />
+        <%= f.password_field :password, autocomplete: "new-password", class: "form-control patient-edit_field"  %>
+        <% if @minimum_password_length %>
+          <br />
+          <em><%= @minimum_password_length %> characters minimum</em>
+        <% end %>
+      </div>
+
+      <div class="form-group mt-3">
+        <%= f.label :password_confirmation, class: "form-label patient-edit_label" %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control patient-edit_field" %>
+      </div>
+
+      <div class="form-group mt-2">
+        <%= f.label :current_password, class: "form-label patient-edit_label" %> <br />
+        <i>(we need your current password to confirm your changes)</i><br />
+        <%= f.password_field :current_password, autocomplete: "current-password", class: "form-control patient-edit_field" %>
+      </div>
+
+      <div class="toolbar mt-2">
+        <%= f.submit "Save", class:"toolbar_update" %>
+        <%= link_to "Cancel", profile_psychologist_path, class:" btn toolbar_back"%>
+      </div>
+
+      <div class="delete-account mb-3">
+        <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class:" btn btn-danger delete-account_button" %>
+      </div>
     <% end %>
-  </div>
+  </section>
 
-  <div class="field">
-    <%= f.label :password_confirmation, class: "form-label patient-edit_label" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-label patient-edit_label" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :current_password, class: "form-label patient-edit_label" %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password", class: "form-label patient-edit_label" %>
-  </div>
 
-  <div class="actions">
-    <%= f.submit "Save", class:"toolbar_update" %>
-    <%= link_to "Cancel", profile_psychologist_path, class:" btn toolbar_back"%>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+</div>
