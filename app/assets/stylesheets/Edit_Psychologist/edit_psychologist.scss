@@ -60,6 +60,8 @@
 
 .delete-account{
   text-align: center;
+  padding-top: 10px;
+
 }
 
 @media(min-width: $breakpoint-desktop){
@@ -79,7 +81,5 @@
     justify-content: center;
   }
 
-  .delete-account{
-    margin: 15px 0px 0px 300px;
-  }
+
 }
