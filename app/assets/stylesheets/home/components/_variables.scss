@@ -1,8 +1,9 @@
 $text-color: #0077B6;
 $white: #fff;
 $breakpoint-desktop: 992px;
+$field-color: #66C0DD;
 
-%flex-column{
+%flex-column {
   display: flex;
   flex-direction: column;
 }
@@ -15,11 +16,12 @@ $breakpoint-desktop: 992px;
   border-radius: 20px;
 }
 
-@mixin desactivated_navbarMobile{
-  .navbar{
+@mixin desactivated_navbarMobile {
+  .navbar {
     display: none;
   }
-  .navbar-expand-lg .navbar-collapse{
+
+  .navbar-expand-lg .navbar-collapse {
     display: none !important;
   }
 }

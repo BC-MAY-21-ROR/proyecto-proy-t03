@@ -15,11 +15,27 @@ class Psychologist::RegistrationsController < Devise::RegistrationsController
   protected
 
   def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :gender, :phone, :country, :birth, :description, :professional_register, :speciality, :price])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [
+      :name,
+      :gender,
+      :phone,
+      :country,
+      :birth,
+      :description,
+      :professional_register,
+      :speciality,
+      :price])
   end
   
   def configure_account_update_params
-    devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:name, :email, :description, :password, :password_confirmation, :current_password) }
+    devise_parameter_sanitizer.permit(:account_update) {
+        |u| u.permit(
+          :name,
+          :email,
+          :description,
+          :password,
+          :password_confirmation,
+          :current_password) }
   end
 
 end

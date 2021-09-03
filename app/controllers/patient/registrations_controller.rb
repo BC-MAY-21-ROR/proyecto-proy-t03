@@ -13,7 +13,18 @@ class Patient::RegistrationsController < Devise::RegistrationsController
   end
 
   def configure_account_update_params
-    devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:name, :gender, :phone, :country, :birth, :email, :description, :password, :password_confirmation, :current_password) }
+    devise_parameter_sanitizer.permit(:account_update) {
+       |u| u.permit(
+          :name,
+          :gender,
+          :phone,
+          :country,
+          :birth,
+          :email,
+          :description,
+          :password,
+          :password_confirmation,
+          :current_password) }
   end
 
 end
