@@ -1,0 +1,37 @@
+
+<div class="List-container">
+
+ <h1>Choose your online Psychologist</h1>
+
+ <section class ="content">
+   <div class="filter-section">
+
+    <p>Search Psychologist by</p>
+
+    <div class="filter-btns">
+      <%= button_to 'Alphabetical Order', { :action => "psychologist_List", :value => 'name'},class: "btn-filter" %>
+      <%= button_to 'Rating', { :action => "psychologist_List", :value => ''},class: "btn-filter" %>
+    </div >
+
+   </div>
+
+   <div class="list">
+   
+    <% @Psychologist.each do |e| %>
+        <div class="user-item">
+          <%= image_tag("user1.png", alt: "Logo", class:"user_image")%>
+          <h1><%= e.name %></h1>
+          <p><%= e.email %></p>
+          <p><%= e.description %> </p>
+          <span class=”glyphicon glyphicon-star-empty”>
+          <button>Schedule Appointment</button>
+          <div>
+            <% 5.times do %>
+            <%= image_tag("rateStar.png", alt: "Logo", class:"start-rate")%>
+           <% end %>
+          </div>
+        </div>
+    <% end %>
+   </div>
+  <section>
+ </div>

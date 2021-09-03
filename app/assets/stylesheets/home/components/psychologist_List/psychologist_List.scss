@@ -1,0 +1,94 @@
+@import "../variables";
+
+$whiteColor: #ffff;
+.List-container {
+  h1 {
+    color: $text-color;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 55px;
+    margin: 1rem 2rem;
+  }
+}
+.filter-section {
+  p {
+    color: rgba(0, 0, 0, 0.4);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 1rem 2rem;
+  }
+}
+.filter-btns {
+  margin: 1rem 2rem;
+}
+.btn-filter {
+  background-color: $text-color;
+  color: $whiteColor;
+  border: none;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 4px 8px;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+
+  .user-item {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem auto;
+    border: 0.5px solid rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    border-top: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+    text-align: center;
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    button {
+      background-color: #48cae4;
+      color: $whiteColor;
+      border: none;
+      border-radius: 20px;
+      width: 80%;
+      padding: 8px 0;
+      margin: 1rem auto;
+    }
+  }
+  .user_image {
+    width: 35%;
+    margin: 0 auto;
+  }
+  .start-rate {
+    width: 12%;
+    margin: 1rem auto;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .list {
+    width: 70vw;
+    display: grid;
+    grid-template-columns: repeat(3, 26.2vw);
+
+    .user-item {
+      width: 20vw;
+      height: auto;
+    }
+  }
+}
