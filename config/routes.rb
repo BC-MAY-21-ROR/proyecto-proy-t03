@@ -12,5 +12,6 @@ Rails.application.routes.draw do
     get 'profile_psychologist', to: "home#profile_psychologist"
     get 'psychologists_list', to: "home#psychologist_List"
     post 'psychologists_list', to: "home#psychologist_List"
+    get 'profile_patient', to: "home#profile_patient"
   end
 end

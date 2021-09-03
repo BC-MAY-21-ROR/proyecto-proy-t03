@@ -1,4 +1,5 @@
 $text-color: #0077B6;
+$white: #fff;
 $breakpoint-desktop: 992px;
 
 %flex-column{
@@ -6,11 +7,11 @@ $breakpoint-desktop: 992px;
   flex-direction: column;
 }
 
-@mixin button($ptop, $pbot, $bgcolor, $color){
+@mixin button($padding_top_and_bot, $padding_left_and_right, $bgcolor, $color-text){
   background-color: $bgcolor;
-  color: $color;
+  color: $color-text;
   text-decoration: none;
-  padding: $ptop $pbot;
+  padding: $padding_top_and_bot $padding_left_and_right;
   border-radius: 20px;
 }
 

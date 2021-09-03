@@ -1,22 +1,22 @@
 @import '../variables';
 
-.psychologist-info{
+.patient-info{
   @extend %flex-column;
   align-items: center;
 
-  .psychologist-info-top{
+  .patient-info-top{
     align-items: center;
     display: flex;
     flex-direction: column;
 
-    .psychologist-info_img{
+    .patient-info_img{
       border: 1px solid blue;
       border-radius: 95px;
       margin: 20px 0;
       width: 50%;
     }
   
-    .psychologist-info-about{
+    .patient-info-about{
       border: 3px solid #C6E0EF;
       border-radius: 20px;
       color: $text-color;
@@ -24,7 +24,7 @@
       margin-bottom: 20px;
       width: 85%;
   
-      .psychologist-info-about_muted{
+      .patient-info-about_muted{
         font-weight: normal;
       }
   
@@ -32,28 +32,17 @@
         color: #000; 
         font-weight: bold;
       }
-      
-      &_textarea_alone{
+  
+      .patient-info-about_txtarea{
         background-color: #66C0DD;
         border-radius: 20px;
         height: 200px;
-      }
-
-      .psychologist-info-about_txtarea{
-        background-color: #66C0DD;
-        border-radius: 20px;
-        height: auto;
         margin: 20px 0;
-        padding: 5px;
-
-        &-text{
-          font-size: 18px;
-        }
       }
     }
   }
   
-  .psychologist-info-profesional{
+  .patient-info-profesional{
     background-color: #66C0DD;
     border-radius: 20px;
     color: #fff;
@@ -61,7 +50,7 @@
     padding: 30px 30px;
     width: 85%;
 
-    .psychologist-info-profesional_text{
+    .patient-info-profesional_text{
       margin-bottom: 30px;
     }
 
@@ -69,71 +58,56 @@
       font-weight: bold;
     }
   }
-
+  
   .buton_edit{
     @include button(5px, 30px, $text-color, #fff);
+    display: block;
   }
 }
 
 @media(min-width: $breakpoint-desktop){
-  .psychologist-info{
+  .patient-info{
     position: inherit;
-    height: 80vh;
+    height: 50vh;
 
-    .psychologist-info-top{
+    .patient-info-top{
       flex-direction: row;
       gap: 70px;
       margin-top: 30px;
-      width: 70%;
 
-      .psychologist-info_img{
+      .patient-info_img{
         border-radius: 150px;
         margin-bottom: 470px;
         width: 15%;
       }
 
-      .psychologist-info-about{
+      .patient-info-about{
         height: 650px;
-        padding: 50px 25px;
-        
+        padding: 20px 25px;
+
         .top{
           margin-top: 40px;
         }
 
-        &_txtarea{
-          padding: 20px;
-          margin-bottom: 20px;
-          width: 70%;
-
-          &-text{
-            padding: 4px;
-          }
-        }
-
-        &_textarea-text{
-          font-size: 20px;
-        }
-
-        &_muted-head{
-          font-size: 60px;
+        .patient-info-about_txtarea{
+          margin-bottom: 40px;
         }
       }
     }
 
-    .psychologist-info-profesional{
+    .patient-info-profesional{
       bottom: 450px;
       display: block;
       position: relative;
-      right: 555px;
+      right: 27.5vw;
       width: 12%;
     }
 
     .buton_edit{
-      @include button(5px, 30px, $text-color, #fff);
       bottom: 450px;
-      display: block;
       position: relative;
-      right: 563px;
+      right: 27.5vw;
     }
+    
   }
 }

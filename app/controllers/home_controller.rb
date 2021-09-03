@@ -21,4 +21,6 @@ class HomeController < ApplicationController
 
 
   
+  def profile_patient; end
+  
 end
