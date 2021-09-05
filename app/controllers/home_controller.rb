@@ -9,13 +9,13 @@ class HomeController < ApplicationController
     
   end
 
-  def psychologist_List
-    @Psychologist = Psychologist.order(params[:value])
-    puts params[:value]
+  def psychologist_list
+    @psychologist = Psychologist.order(params[:value])
+    
   end
 
   def sort_list
-    @Psychologist = Psychologist.order(params[:value])
+    @psychologist = Psychologist.order(params[:value])
     puts params[:value]
   end
 

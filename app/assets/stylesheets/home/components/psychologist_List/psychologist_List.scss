@@ -1,7 +1,8 @@
 @import "../variables";
 
 $whiteColor: #ffff;
-.List-container {
+
+.list-container {
   h1 {
     color: $text-color;
     font-weight: bold;
@@ -10,6 +11,7 @@ $whiteColor: #ffff;
     margin: 1rem 2rem;
   }
 }
+
 .filter-section {
   p {
     color: rgba(0, 0, 0, 0.4);
@@ -19,9 +21,11 @@ $whiteColor: #ffff;
     margin: 1rem 2rem;
   }
 }
+
 .filter-btns {
   margin: 1rem 2rem;
 }
+
 .btn-filter {
   background-color: $text-color;
   color: $whiteColor;
@@ -65,10 +69,12 @@ $whiteColor: #ffff;
       margin: 1rem auto;
     }
   }
+
   .user_image {
     width: 35%;
     margin: 0 auto;
   }
+
   .start-rate {
     width: 12%;
     margin: 1rem auto;

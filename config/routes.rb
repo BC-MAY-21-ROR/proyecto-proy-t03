@@ -10,8 +10,8 @@ Rails.application.routes.draw do
     devise_for :psychologists, :controllers => { registrations: 'patient/registrations' }
     devise_for :patients, :controllers => { registrations: 'psychologist/registrations' } 
     get 'profile_psychologist', to: "home#profile_psychologist"
-    get 'psychologists_list', to: "home#psychologist_List"
-    post 'psychologists_list', to: "home#psychologist_List"
+    get 'psychologists_list', to: "home#psychologist_list"
+    post 'psychologists_list', to: "home#psychologist_list"
     get 'profile_patient', to: "home#profile_patient"
   end
 end

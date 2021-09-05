@@ -1,5 +1,5 @@
 
-<div class="List-container">
+<div class="list-container">
 
  <h1>Choose your online Psychologist</h1>
 
@@ -17,7 +17,7 @@
 
    <div class="list">
    
-    <% @Psychologist.each do |e| %>
+    <% @psychologist.each do |e| %>
         <div class="user-item">
           <%= image_tag("user1.png", alt: "Logo", class:"user_image")%>
           <h1><%= e.name %></h1>
@@ -34,4 +34,5 @@
     <% end %>
    </div>
   <section>
+
  </div>
