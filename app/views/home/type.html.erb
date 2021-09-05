@@ -1,32 +1,32 @@
 <div class="container">
   <section class="type-info">
-    <h1 class="type-info_text">Hi, what are you?</h1>
+    <h1 class="type-info_text"><%= t('type_question')%></h1>
   </section>
   
   <section class="type-buttons">
     <% if params['commit'] == 'sign_up' %>
       <div class="type-buttons-psychologist
                   shadow p-3 mb-5 bg-body rounded">
-        <h3>Psychologist</h3>
+        <h3><%= t('psycho_type') %></h3>
         <%= link_to image_tag("undraw_doctors_hwty.svg", class:"type-buttons-psychologist_img mt-2"), new_psychologist_registration_path%>
       </div>
 
       <div class="type-buttons-patient
                   shadow-lg p-3 mb-5 bg-body rounded">
-        <h3>Patient</h3>
+        <h3><%= t('patient_type') %></h3>
         <%= link_to image_tag("undraw_Done_re_oak4.svg", class:"img-fluid mt-2"), new_patient_registration_path%>
       </div>
 
     <% elsif params['commit'] == 'sign_in' %>
       <div class="type-buttons-psychologist
                   shadow p-3 mb-5 bg-body rounded">
-        <h3>Psychologist</h3>
+        <h3><%= t('psycho_type') %></h3>
         <%= link_to image_tag("undraw_doctors_hwty.svg", class:"type-buttons-psychologist_img mt-2"), new_psychologist_session_path%>
       </div>
 
       <div class="type-buttons-patient
                   shadow-lg p-3 mb-5 bg-body rounded">
-        <h3>Patient</h3>
+        <h3><%= t('patient_type') %></h3>
         <%= link_to image_tag("undraw_Done_re_oak4.svg", class:"img-fluid mt-2"), new_patient_session_path%>
       </div>
     <% end %>
