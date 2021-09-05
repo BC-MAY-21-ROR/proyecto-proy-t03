@@ -9,8 +9,10 @@
     <p>Search Psychologist by</p>
 
     <div class="filter-btns">
-      <%= button_to 'Alphabetical Order', { :action => "psychologist_List", :value => 'name'},class: "btn-filter" %>
-      <%= button_to 'Rating', { :action => "psychologist_List", :value => ''},class: "btn-filter" %>
+
+      <%= button_to 'Alphabetical Order', { :action => "psychologist_list", :value => 'name'},class: "btn-filter" %>
+      <%= button_to 'Rating', { :action => "psychologist_list", :value => ''},class: "btn-filter" %>
+    
     </div >
 
    </div>
@@ -32,7 +34,9 @@
           </div>
         </div>
     <% end %>
+
    </div>
+   
   <section>
 
  </div>

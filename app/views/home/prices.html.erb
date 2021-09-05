@@ -1,0 +1,46 @@
+<main class="container-fluid">
+
+ <section class="prices-head">
+    <div class="prices-text">
+        <h2> <%= t('prices_text_head') %></h2>
+        <p><%= t('prices_text2') %></p> 
+    </div>
+  </section>
+
+    <div class="prices-table">
+        <div class="prices-box">
+        <div class="prices-col-header">
+            <h3><%= t('ind_appointment') %></h3>
+            <p>$23 USD</p> 
+        </div> 
+        <div class="prices-col-features">
+            <p><%= t('text_box_prices1') %></p>
+        </div>
+        <div class="prices-col-buy"><a><%=t('price_button')%></a>  
+        </div>
+    </div>
+
+    <div class="prices-box">
+        <div class="prices-col-header">
+            <h3><%= t('cou_appointment') %></h3>
+                <p>$30 USD</p> 
+        </div> 
+        <div class="prices-col-features">
+            <p><%= t('text_box_prices2') %></p>
+        </div>
+        <div class="prices-col-buy"><a><%= t('price_button') %></a>
+        </div>
+    </div>
+
+    <div class="prices-box">
+        <div class="prices-col-header">
+            <h3><%= t('pack_appointment') %></h3>
+                <p>$80.95 USD</p> 
+        </div> 
+        <div class="prices-col-features">
+            <p><%= t('text_box_prices3') %></p> 
+        </div>
+        <div class="prices-col-buy"><a><%= t('price_button') %></a>
+        </div>
+    </div>
+</main>

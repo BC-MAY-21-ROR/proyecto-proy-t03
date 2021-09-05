@@ -1,9 +1,14 @@
 es:
+# NavBar
   psycho: "Psicólogo"
   prices: "Precios"
   faqs: "Preguntas Frecuentes"
-  sign_up: "Registrarse"
+  sign_up: "Registrate"
   sign_in: "Ingresar"
+  sign_out: "Cerrar Sesión"
+  my_profile: "Mi Perfil"
+
+# FAQS 
   what_html: <h3>¿Qué es Let Me Help You?</h3>
              <p>Let Me Help You es una plataforma de terapia psicológica en línea segura y asequible. <br>
                Nuestra misión es ayudar a las personas a recuperar la estabilidad emocional que necesitan para su vida diaria.</p>
@@ -28,3 +33,14 @@ es:
               Es importante que ingrese a su cita a tiempo. Los tiempos de consulta han sido programados especialmente para ti, si llegas tarde a tu cita tendrá que ser más corta para respetar los horarios del resto de pacientes. <br>
               Independientemente de la duración de su cita, se le cobrará en su totalidad. 
               </p>
+# Prices
+  prices_text_head: "Ir a terapia es un proceso que te cambia la vida"
+  prices_text2: "Agenda 4 citas y obtén un descuento al realizar tu pago"
+  ind_appointment: "Cita Individual"
+  text_box_prices1: "1 cita por videollamada de 50 min. para 1 persona"
+  cou_appointment: "Cita de pareja"
+  text_box_prices2: "1 cita por videollamada de 50 min. para 2 personas"
+  pack_appointment: "Paquete de Citas"
+  text_box_prices3: "4 citas por videollamada de 50 min. hasta para 2 personas"
+  price_button: "Quiero Comenzar"
+
