@@ -1,45 +1,5 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-#NAVBAR
-  hello: "Hello world"
-  psycho: "Psychologist"
-  prices: "Prices"
-  faqs: "FAQS"
-  sign_up: "Sign Up"
-  sign_in: "Sign In"
-  sign_out: "Sing Out"
-  my_profile: "My Profile"
-#FAQS  
+  # FAQS
   what_html: <h3>What is Let Me Help You?</h3>
              <p>Terapify is a safe and affordable online psychological therapy platform. <br>
                 Our mission is to help people regain the emotional stability they need for their daily lives.</p>
@@ -64,7 +24,7 @@ en:
               It is important that you enter your appointment on time. The consultation times have been programmed especially for you, if you are late for your appointment, it will have to be shorter to respect the schedules of the other patients. <br>
               Regardless of the duration of your appointment, it will be charged in full. 
               </p>
-#PRICES
+  # PRICES
   prices_text_head: "Going to therapy is a life-changing process"
   prices_text2: "Schedule 4 appointments and get a discount when making your payment"
   ind_appointment: "Individual appointment"
@@ -75,3 +35,26 @@ en:
   text_box_prices3: "4 appointments per video call of 50 min. up to 2 people"
   price_button: "I want to start"
 
+  # INDEX
+  start: "Start Now"
+  main_content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+                 Eos, natus.Lorem ipsum dolor sit amet consectetur "
+  psycho_html: <h2 class="hero-text_medium">Psychological</h2>
+  help_html: <h1 class="hero-text_large">HELP</h1>
+
+  # PROFILE
+  about_me: "About me"
+  age: "Age"
+  country: "Country"
+  phone: "Phone"
+  email: "Email"
+  edit_profile: "Edit Profile"
+  
+  # PSYCHOLOGIST
+  specialities: "Specialities"
+  register: "Professional Register"
+
+  # TYPE
+  type_question: "Hi, what are you?"
+  psycho_type: "Psychologist"
+  patient_type: "Patient"

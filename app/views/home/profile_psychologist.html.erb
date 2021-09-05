@@ -4,7 +4,7 @@
       <%= image_tag("user.svg", alt: "User img", class:"psychologist-info_img")%>
       <div class="psychologist-info-about">
         <h1 class="psychologist-info-about_muted-head mb-4 mt-2"><%= current_psychologist.name %></h1>
-        <h2 class="psychologist-info-about_muted top">About me</h2>
+        <h2 class="psychologist-info-about_muted top"><%= t('about_me')%></h2>
           <% if !current_psychologist.description %>
             <div class="psychologist-info-about_textarea_alone mb-3"></div>
           <% else %>
@@ -14,38 +14,38 @@
               </p>
             </div>
           <% end %> 
-        <h2 class="fw-bolde">Specialitites</h2>
+        <h2 class="fw-bolde"><%= t('specialities') %></h2>
         <p class="btn btn-primary text-white mt-4"><%= current_psychologist.speciality %></p>
       </div>
     </div>
 
     <div class="psychologist-info-profesional">
       <p class="psychologist-info-profesional_text"> 
-        <span>Age:</span>
+        <span><%= t('age')%>:</span>
         <%= age(current_psychologist) %>
       </p>
 
       <p class="psychologist-info-profesional_text">
-        <span>Country:</span>
+        <span><%= t('country')%>:</span>
         <%= current_psychologist.country %>
       </p>
 
       <p class="psychologist-info-profesional_text">
-        <span>Phone:</span>
+        <span><%= t('phone')%>:</span>
         <%= current_psychologist.phone %>
       </p>
 
       <p class="psychologist-info-profesional_text">
-        <span>Email:</span>
+        <span><%= t('email')%>:</span>
         <%= current_psychologist.email %>
       </p>
 
       <p class="psychologist-info-profesional_text">
-        <span>Professional Register:</span> <br>
+        <span><%= t('register') %>:</span> <br>
         <%= current_psychologist.professional_register %>
       </p>
     </div>
 
-    <%= link_to t("Edit Profile"), edit_psychologist_registration_path, class:"buton_edit mb-2"%>
+    <%= link_to t("edit_profile"), edit_psychologist_registration_path, class:"buton_edit mb-2"%>
   </section>
 </div>

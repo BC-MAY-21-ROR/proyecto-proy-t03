@@ -4,33 +4,33 @@
 
  </div>
  <div class="form-section">
- <h1>Hello!</h1>
- <p>Sign into you account here <%= resource_name%></p>
+ <h1><%= t('greeting') %></h1>
+ <p><%= t('sign_message') %> <%= resource_name%></p>
 
  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
    <div class="field">
     <br />
-     <%= f.email_field :email, autofocus: true, autocomplete: "email",  class: "form-control", placeholder:'Email' %>
+     <%= f.email_field :email, autofocus: true, autocomplete: "email",  class: "form-control", placeholder: t('email') %>
    </div>
 
    <div class="field">
     <br />
-     <%= f.password_field :password, autocomplete: "current-password", class: "form-control", placeholder:'Password' %>
+     <%= f.password_field :password, autocomplete: "current-password", class: "form-control", placeholder:t('password') %>
    </div>
 
    <% if devise_mapping.rememberable? %>
      <div class="field">
        <%= f.check_box :remember_me %>
-       <%= f.label :remember_me %>
+       <%= f.label t('remember') %>
      </div>
    <% end %>
 
    <div class="actions">
-     <%= f.submit "Log in",class: "form-button" %>
+     <%= f.submit t('log_in'),class: "form-button" %>
    </div>
  <% end %>
 
- <h3>Don´t have an account?  <%=  render "devise/shared/links" %></h3>
+ <h3>  <%= t('account_question') %><%= render "devise/shared/links" %></h3>
 
  </div>
 
