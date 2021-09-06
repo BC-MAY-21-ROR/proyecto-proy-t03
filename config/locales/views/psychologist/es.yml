@@ -1,0 +1,14 @@
+es:
+  # NEW
+  price: "Precio"
+  speciality: "Especialidad"
+  # EDIT
+  name: "Nombre"
+  tell_about: "¡Cuéntanos algo sobre ti! "
+  current_password: "Contraseña Actual"
+  password_message: "Necesitamos su contraseña actual para confirmar los cambios"
+  save: "Guardar"
+  cancel: "Cancelar"
+  cancel_account: "Cancelar mi cuenta"
+  cancel_question: "¿Estas seguro?"
+
