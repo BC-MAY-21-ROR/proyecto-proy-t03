@@ -7,7 +7,25 @@ class HomeController < ApplicationController
 
   def faqs; end
 
-  def profile_psychologist; end
+  def profile_psychologist; 
+    
+  end
+
+  def psychologist_list
+    
+    @psychologist = Psychologist.order(params[:value])
+    
+  end
+
+  def sort_list
+
+    @psychologist = Psychologist.order(params[:value])
+  
+  end
+
+
+  
+  def profile_patient; end
   
   def profile_patient; end
   
