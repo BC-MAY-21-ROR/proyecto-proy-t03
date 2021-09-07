@@ -28,7 +28,7 @@
     <div class="field">
       <% if @minimum_password_length %>
       <% end %>
-      <%= f.password_field :password, class: 'form_field', placeholder: t('password_lenght'), autocomplete: "new-password" %>
+      <%= f.password_field :password, class: 'form_field', placeholder: t('password_length'), autocomplete: "new-password" %>
     </div>
 
     <div class="field">
@@ -46,9 +46,9 @@
           <%= f.radio_button(:gender, "female") %>
           <%= f.label(:gender, t('female'), value: "female")%>
         </div>
-        <div class="binary">
+        <div class="non-binary">
           <%= f.radio_button(:gender, "Non-Binary") %>
-          <%= f.label(:gender, t('other'), value: "non-binary")%>
+          <%= f.label(:gender, t('non_binary'), value: "non-binary")%>
         </div>
       </div>
     </div>
