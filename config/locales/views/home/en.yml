@@ -56,5 +56,5 @@ en:
 
   # TYPE
   type_question: "Hi, what are you?"
-  psycho_type: "Psychologist"
+  psychologist_type: "Psychologist"
   patient_type: "Patient"

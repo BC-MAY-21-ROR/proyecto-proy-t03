@@ -11,7 +11,7 @@
     <% if params['commit'] == 'sign_up' %>
       <div class="type-buttons-psychologist
                   shadow p-3 mb-5 bg-body rounded">
-        <h3><%= t('psycho_type') %></h3>
+        <h3><%= t('psychologist_type') %></h3>
         <%= link_to image_tag("undraw_doctors_hwty.svg", class:"type-buttons-psychologist_img mt-2"), new_psychologist_registration_path%>
       </div>
 
@@ -24,7 +24,7 @@
     <% elsif params['commit'] == 'sign_in' %>
       <div class="type-buttons-psychologist
                   shadow p-3 mb-5 bg-body rounded">
-        <h3><%= t('psycho_type') %></h3>
+        <h3><%= t('psychologist_type') %></h3>
         <%= link_to image_tag("undraw_doctors_hwty.svg", class:"type-buttons-psychologist_img mt-2"), new_psychologist_session_path%>
       </div>
 
