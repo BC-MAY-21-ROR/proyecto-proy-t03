@@ -1,0 +1,40 @@
+@import '../home/components/variables';
+
+.title{
+    text-align: center
+}
+
+.appoint_container{
+    @extend %flex-column;
+    align-content: center;
+    justify-content: center;
+    padding: 25px;
+    
+    .list-element{
+        @extend %flex-column;
+        border: 2px solid #0077B6;
+        border-radius: 20px;
+        box-shadow: 3px 5px 5px 0px rgba(0,119,182,0.48);
+        padding: 25px;
+
+        a{
+            font-weight: bold;
+            color: #0077B6;
+        }
+
+        .btn{
+            color: white;
+            border-radius: 15px;
+
+            &-edit{
+                background-color: #0077B6;
+                
+            }
+            &-cancel{
+                margin-left: 10px;
+                background-color: #F15959;
+            }
+        }
+    }
+}
+
