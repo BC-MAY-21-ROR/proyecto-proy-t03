@@ -3,9 +3,12 @@
     <div class="list-element">
       <div class="left-content">
         <p>
-          <a>Psychologist:</a> <br>
-          <a>Date: </a><%= a.datetime %> <br>
-          <a>Price: </a>$50 usd
+          <a>Psychologist:</a>
+          <% @psychologist.each do |p|%>
+             <%= p.name if a.psychologist_id == p.id%> 
+          <% end %> <br>
+          <a>Date: </a> <%= a.datetime %> <br>
+          <a>Price: </a> $50 usd
         </p>
       </div>
       <div class="middle-content">

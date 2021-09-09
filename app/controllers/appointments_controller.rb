@@ -4,6 +4,7 @@ class AppointmentsController < ApplicationController
 
   def index
     @appointment = Appointment.where(patient_id: get_patient)
+    @psychologist = Psychologist.all
   end
   
   def new
