@@ -22,17 +22,23 @@
             color: #0077B6;
         }
 
-        .btn{
-            color: white;
-            border-radius: 15px;
+        .right-content{
+            @extend %flex-column;
+            flex-direction: row;
 
-            &-edit{
-                background-color: #0077B6;
-                
-            }
-            &-cancel{
-                margin-left: 10px;
-                background-color: #F15959;
+            .btn{
+                width: 110px;
+                color: white;
+                border-radius: 20px;
+    
+                &-edit{
+                    background-color: #0077B6;
+                    
+                }
+                &-cancel{
+                    margin-left: 10px;
+                    background-color: #F15959;
+                }
             }
         }
     }
