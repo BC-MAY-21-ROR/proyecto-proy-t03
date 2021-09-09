@@ -1,6 +1,8 @@
 @import '../home/components/variables';
 
-.title{
+h2{
+    margin-top: 20px;
+    color: #0077B6;
     text-align: center
 }
 
@@ -45,6 +47,18 @@
 }
 
 @media(min-width: $breakpoint-desktop) {
+    .table-container{
+        border: 3px solid #66bfddaf;
+        margin: 20px;
+        border-radius: 20px;
+        .title{
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+            border-bottom: 1px solid #66C0DD;
+        }
+    }
+
     .appoint_container{
         .list-element{
             flex-direction: row;
