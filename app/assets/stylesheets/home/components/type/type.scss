@@ -27,6 +27,9 @@
 }
 
 @media (min-width: $breakpoint-desktop){
+    .container{
+      display: block;
+    }
     .type-buttons{
       display: flex;
       align-items: center;

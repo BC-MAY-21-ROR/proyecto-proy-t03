@@ -5,7 +5,7 @@
  </div>
  <div class="form-section">
  <h1><%= t('greeting') %></h1>
- <p><%= t('sign_message') %></p>
+ <p><%= t('sign_message') %> <%= resource_name%></p>
 
  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
    <div class="field">

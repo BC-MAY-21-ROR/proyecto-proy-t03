@@ -22,15 +22,20 @@
     <% @psychologist.each do |e| %>
         <div class="user-item">
           <%= image_tag("user1.png", alt: "Logo", class:"user_image")%>
-          <h1><%= e.name %></h1>
-          <p><%= e.email %></p>
-          <p><%= e.description %> </p>
+          <div class="user-item_info">
+            <h1><%= e.name %></h1>
+            <p><%= e.email %></p>
+            <p><%= e.description %> </p>
+            <p class="btn btn-primary mt-2 p-1"><span class="text-white fw-bold"><%= e.speciality %></span></p>
+          </div> 
           <span class=”glyphicon glyphicon-star-empty”>
-          <button>Schedule Appointment</button>
-          <div>
+          <% if not current_psychologist %>
+            <%= link_to 'Schedule Appointment', new_appointment_path(psychologist_id: e.id), class:"user_button"%>
+          <% end %>
+          <div class="start">
             <% 5.times do %>
-            <%= image_tag("rateStar.png", alt: "Logo", class:"start-rate")%>
-           <% end %>
+              <%= image_tag("rateStar.png", alt: "Logo", class:"start-rate")%>
+            <% end %>
           </div>
         </div>
     <% end %>

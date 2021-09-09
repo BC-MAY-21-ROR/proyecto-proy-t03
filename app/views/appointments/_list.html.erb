@@ -1,0 +1,38 @@
+<div id="table">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th id="th-number">Id</th>
+        <th id="th-name">datetime</th>
+        <th id="th-email">patient</th>
+        <th id="th-admin">psychologist</th>
+        <th colspan="2" id="th-options">Options</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @appointment.each do |a| %>
+        <tr>
+          <td>
+            <%= a.id %>
+          </td>
+          <td>
+            <%= a.datetime %>
+          </td>
+          <td>
+            <%= a.patient_id %>
+          </td>
+          <td>
+            <%= a.psychologist_id %>
+          </td>
+          <td id="tr-edit">
+            <%= link_to "Edit", edit_appointment_path(a), class: "btn btn-warning" %>
+          </td>
+          <td id="tr-deactivate">
+            <%= link_to "Delete", appointment_path(a), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+          </td> 
+
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

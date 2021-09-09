@@ -10,22 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_31_213231) do
+ActiveRecord::Schema.define(version: 2021_09_09_005447) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "appointment", force: :cascade do |t|
-    t.date "date"
-    t.time "time"
+  create_table "appointments", force: :cascade do |t|
+    t.datetime "datetime"
     t.boolean "pay", default: false, null: false
     t.string "message"
     t.bigint "patient_id"
     t.bigint "psychologist_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["patient_id"], name: "index_appointment_on_patient_id"
-    t.index ["psychologist_id"], name: "index_appointment_on_psychologist_id"
+    t.index ["patient_id"], name: "index_appointments_on_patient_id"
+    t.index ["psychologist_id"], name: "index_appointments_on_psychologist_id"
   end
 
   create_table "patients", force: :cascade do |t|
@@ -53,7 +52,6 @@ ActiveRecord::Schema.define(version: 2021_08_31_213231) do
     t.text "description"
     t.string "professional_register"
     t.string "speciality"
-    t.money "price", scale: 2
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -63,6 +61,6 @@ ActiveRecord::Schema.define(version: 2021_08_31_213231) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "appointment", "patients"
-  add_foreign_key "appointment", "psychologists"
+  add_foreign_key "appointments", "patients"
+  add_foreign_key "appointments", "psychologists"
 end
