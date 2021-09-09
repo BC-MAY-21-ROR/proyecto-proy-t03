@@ -59,14 +59,17 @@ $whiteColor: #ffff;
       padding: 0;
     }
 
-    button {
-      background-color: #48cae4;
-      color: $whiteColor;
-      border: none;
-      border-radius: 20px;
-      width: 80%;
-      padding: 8px 0;
-      margin: 1rem auto;
+    .user_button {
+      @include button(15px, 25px, #008ca9, $whiteColor);
+      display: block;
+      margin: 0 auto;
+      margin-top: 15px;
+      width: 65%;
+      transition: 0.5s;
+
+      &:hover{
+        background-color: #153941;
+      }
     }
   }
 
@@ -75,10 +78,14 @@ $whiteColor: #ffff;
     margin: 0 auto;
   }
 
-  .start-rate {
-    width: 12%;
-    margin: 1rem auto;
+  .start{
+    margin-bottom: 8px;
+    &-rate {
+      width: 12%;
+      margin: 1rem auto;
+    }
   }
+  
 }
 
 @media (min-width: $breakpoint-desktop) {

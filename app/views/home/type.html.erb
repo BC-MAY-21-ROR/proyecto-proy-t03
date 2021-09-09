@@ -1,6 +1,10 @@
 <div class="container">
   <section class="type-info">
+    <% if params['commit'] == 'sign_up'%>
     <h1 class="type-info_text">Hi, what are you?</h1>
+    <% elsif params['commit'] == 'sign_in' %>
+    <h1 class="type-info_text">Welcome back!</h1>
+    <% end %>
   </section>
   
   <section class="type-buttons">
