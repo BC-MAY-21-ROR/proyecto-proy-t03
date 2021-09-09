@@ -44,3 +44,38 @@
     }
 }
 
+@media(min-width: $breakpoint-desktop) {
+    .appoint_container{
+        .list-element{
+            flex-direction: row;
+            border: 1px solid gray;
+            border-radius: 10px;
+            box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.48);
+            padding: 10px;
+
+            .left-content{
+                width: 45%;
+            }
+
+            .middle-content{
+                margin-top: auto;
+                margin-bottom: auto;
+                width: 40%;
+            }
+
+            .right-content{
+                flex-direction: column;
+                text-align: center;
+                width: 15%;
+
+                .btn{
+                    
+                    &-cancel{
+                        margin-top: 10px;
+                        margin-left: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
