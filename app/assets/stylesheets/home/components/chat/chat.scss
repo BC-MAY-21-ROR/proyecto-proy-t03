@@ -1,0 +1,36 @@
+#sntch_button
+{   
+    width: 90px;
+    height: 90px;
+    right: 10px;
+    bottom: 10px;
+    background-image: url(https://imgur.com/SIfRtBP);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+}
+#sntch_webchat iframe {
+    width: 600px;
+    height: 600px;
+}
+
+#sntch_webchat {
+    width: 600px;
+    height: 600px;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+#sntch_close {
+    top: 12px;
+    right: 8px;
+    width: 40px;
+    height: 40px;
+    font-size: 26px;
+    line-height: 40px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    cursor: pointer;
+}
+
