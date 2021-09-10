@@ -1,0 +1,15 @@
+en:
+  greeting: "Hello!"
+  new_account: "Create New Account Here."
+  name: "Full Name"
+  password_length: "Password (6 characters minimum)"
+  password_confirmation: "Password confirmation"
+  gender: "Select your gender"
+  male: "Male"
+  female: "Female"
+  non_binary: "Non-binary"
+  account_question: "Do you have an account?"
+
+  # LINKS
+  log_in: "Log In"
+

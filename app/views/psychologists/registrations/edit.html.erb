@@ -6,7 +6,7 @@
       <%= render "psychologists/shared/error_messages", resource: resource %>
 
       <div class="form-group psychologist-edit_form">
-        <%= f.label :name, class:"form-label psychologist-edit_label"%>
+        <%= f.label t('name'), class:"form-label psychologist-edit_label"%>
         <%= f.text_field :name, class:"form-control psychologist-edit_field"%>
       </div>
 
@@ -15,13 +15,13 @@
       <% end %>
 
       <div class="form-group">
-        <%= f.label :email, class:"form-label mt-2 psychologist-edit_label"%> 
+        <%= f.label t('email'), class:"form-label mt-2 psychologist-edit_label"%> 
         <%= f.email_field :email, class:"form-control psychologist-edit_field"%>
       </div>
 
       <div class="form-group">
         <%= f.label :description, 
-                    "Tell us something about you!", 
+                    t('tell_about'), 
                     class:"form-label mt-3 psychologist-edit_label fs-5"%>
         <%= f.text_area :description, 
                         cols: 40, 
@@ -31,30 +31,30 @@
       
       <div class="form-group mt-2">
         <small class="fst-italic text-muted info-text">If you don't want to change your password, you can leave it blank.</small> <br>
-        <%= f.label :password, class:"form-label psychologist-edit_label"%>
+        <%= f.label t('password'), class:"form-label psychologist-edit_label"%>
         <%= f.password_field :password, class:"form-control psychologist-edit_field" %>
       </div>
 
       <div class="form-group mt-3">
-        <%= f.label :password_confirmation, class:"form-label psychologist-edit_label"%>
+        <%= f.label t('password_confirmation'), class:"form-label psychologist-edit_label"%>
         <%= f.password_field :password_confirmation, class: "form-control psychologist-edit_field" %>
       </div>
 
       <div class="form-group mt-2">
-        <p class="fst-italic text-muted info-text">We need your current password to confirm changes</p>
-        <%= f.label :current_password, class:"form-label psychologist-edit_label"%> 
+        <p class="fst-italic text-muted info-text"><%= t('password_message') %></p>
+        <%= f.label t('current_password'), class:"form-label psychologist-edit_label"%> 
         <%= f.password_field :current_password, class: "form-control psychologist-edit_field" %>
       </div>
     
 
     <div class="toolbar">
-      <%= f.submit "Save", class:"toolbar_update" %>
-      <%= link_to "Cancel", profile_psychologist_path, class:" btn toolbar_back"%>
+      <%= f.submit t('save'), class:"toolbar_update" %>
+      <%= link_to t('cancel'), profile_psychologist_path, class:" btn toolbar_back"%>
     </div>
 
     <% end %>
   </section>
   <div class="delete-account mb-3">
-    <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class:" btn btn-danger delete-account_button" %>
+    <%= button_to t('cancel_account'), registration_path(resource_name), data: { confirm: t('cancel_question') }, method: :delete, class:" btn btn-danger delete-account_button" %>
   </div>
 </div>

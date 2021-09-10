@@ -1,0 +1,17 @@
+@import '../home/components/variables';
+.edit_container{
+    text-align: center;
+    margin: 20px;
+    .form_edit_container{
+        @extend %flex-column;
+        @extend %flex_align_center;
+        text-align: left;
+        margin-right: auto;
+        margin-left: auto;
+        width: 300px;
+        .btn_cancel{
+            @extend %flex-column;
+            align-items: center;
+        }
+    }
+}

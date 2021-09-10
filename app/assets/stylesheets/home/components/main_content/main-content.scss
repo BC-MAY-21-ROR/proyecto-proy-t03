@@ -25,6 +25,10 @@
       font-weight: bold;
       position: relative;
       bottom: 25px;
+      &_es {
+        font-size: 4rem;
+        font-weight: bold;
+      }
     }
   }
 
@@ -72,6 +76,9 @@
 
       .hero-text_large {
         font-size: 10rem;
+        &_es {
+          font-size: 6rem;
+        }
       }
     }
 

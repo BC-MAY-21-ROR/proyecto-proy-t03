@@ -4,7 +4,7 @@
       <%= image_tag("user.svg", alt: "User img", class:"patient-info_img")%>
       <div class="patient-info-about">
         <h1 class="patient-info-about_muted mb-4 mt-2"><%= current_patient.name %></h1>
-        <h2 class="patient-info-about_muted top">About me</h2>
+        <h2 class="patient-info-about_muted top"><%= t('about_me')%></h2>
         <div class="patient-info-about_txtarea">
           <%= current_patient.description %>
         </div>
@@ -13,26 +13,26 @@
 
     <div class="patient-info-profesional">
       <p class="patient-info-profesional_text"> 
-        <span>Age:</span>
+        <span><%= t('age')%>:</span>
         <%= age(current_patient) %>
       </p>
 
       <p class="patient-info-profesional_text">
-        <span>Country:</span>
+        <span><%= t('country')%>:</span>
         <%= current_patient.country %>
       </p>
 
       <p class="patient-info-profesional_text">
-        <span>Phone:</span>
+        <span><%= t('phone')%>:</span>
         <%= current_patient.phone %>
       </p>
 
       <p class="patient-info-profesional_text">
-        <span>Email:</span>
+        <span><%= t('email')%>:</span>
         <%= current_patient.email %>
       </p>
     </div>
 
-    <%= link_to t("Edit Profile"), edit_patient_registration_path, class:"buton_edit mb-2"%>
+    <%= link_to t("edit_profile"), edit_patient_registration_path, class:"buton_edit mb-2"%>
   </section>
 </div>
