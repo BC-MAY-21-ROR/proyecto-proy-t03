@@ -2,6 +2,7 @@
 .edit_container{
     text-align: center;
     margin: 20px;
+    
     .form_edit_container{
         @extend %flex-column;
         @extend %flex_align_center;
@@ -9,6 +10,7 @@
         margin-right: auto;
         margin-left: auto;
         width: 300px;
+        
         .btn_cancel{
             @extend %flex-column;
             align-items: center;
