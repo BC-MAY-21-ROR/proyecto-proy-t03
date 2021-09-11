@@ -1,101 +1,103 @@
 @import '../home/components/variables';
 
 h2{
-    margin-top: 20px;
-    color: $title-color;
-    text-align: center
+  margin-top: 20px;
+  color: $title-color;
+  text-align: center
 }
 
 .table-container{
-    margin-left: auto;
-    margin-right: auto;
-    width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
 }
 
 .appoint_container{
+  @extend %flex-column;
+  @extend %flex_align_center;
+  padding: 25px;
+    
+  .list-element{
     @extend %flex-column;
-    @extend %flex_align_center;
+    border: 2px solid $text-color;
+    border-radius: 20px;
+    box-shadow: 3px 5px 5px 0px rgba(0,119,182,0.48);
     padding: 25px;
-    
-    .list-element{
-        @extend %flex-column;
-        border: 2px solid $text-color;
-        border-radius: 20px;
-        box-shadow: 3px 5px 5px 0px rgba(0,119,182,0.48);
-        padding: 25px;
 
-        a{
-            font-weight: bold;
-            color: $text-color;
-        }
-
-        .right-content{
-            @extend %flex-column;
-            flex-direction: row;
-
-            .btn{
-                width: 110px;
-                color: white;
-                border-radius: 20px;
-    
-                &-edit{
-                    background-color: $text-color;
-                }
-                &-cancel{
-                    margin-left: 10px;
-                    background-color: #F15959;
-                }
-            }
-        }
+    a{
+      font-weight: bold;
+      color: $text-color;
     }
+
+    .right-content{
+      @extend %flex-column;
+      flex-direction: row;
+
+      .btn{
+        width: 110px;
+        color: white;
+        border-radius: 20px;
+
+        &-edit{
+          background-color: $text-color;
+        }
+        &-cancel{
+          margin-left: 10px;
+          background-color: #F15959;
+        }
+      }
+    }
+  }
 }
 
 @media(min-width: $breakpoint-desktop) {
-    .table-container{
-        width: auto;
-        border: 3px solid #66bfddaf;
-        margin: 20px;
-        border-radius: 20px;
-        .title{
-            margin-left: auto;
-            margin-right: auto;
-            width: 90%;
-            border-bottom: 1px solid #66C0DD;
-        }
+    
+  .table-container{
+    width: auto;
+    border: 3px solid #66bfddaf;
+    margin: 20px;
+    border-radius: 20px;
+    
+    .title{
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
+      border-bottom: 1px solid #66C0DD;
     }
+  }
 
-    .appoint_container{
+  .appoint_container{
         
-        .list-element{
-            flex-direction: row;
-            border: 1px solid gray;
-            border-radius: 10px;
-            box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.48);
-            padding: 10px;
+    .list-element{
+      flex-direction: row;
+      border: 1px solid gray;
+      border-radius: 10px;
+      box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.48);
+      padding: 10px;
 
-            .left-content{
-                width: 45%;
-            }
+      .left-content{
+        width: 45%;
+      }
 
-            .middle-content{
-                margin-top: auto;
-                margin-bottom: auto;
-                width: 40%;
-            }
+      .middle-content{
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 40%;
+      }
 
-            .right-content{
-                flex-direction: column;
-                text-align: center;
-                width: 15%;
+      .right-content{
+        flex-direction: column;
+        text-align: center;
+        width: 15%;
 
-                .btn{
+        .btn{
                     
-                    &-cancel{
-                        margin-top: 10px;
-                        margin-left: 0px;
-                    }
-                }
-            }
+          &-cancel{
+            margin-top: 10px;
+            margin-left: 0px;
+          }
         }
+      }
     }
+  }
 }
