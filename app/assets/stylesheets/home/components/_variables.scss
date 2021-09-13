@@ -2,6 +2,12 @@ $text-color: #0077B6;
 $white: #fff;
 $breakpoint-desktop: 992px;
 $field-color: #66C0DD;
+$title-color: #0077B6;
+
+%flex_align_center{
+  align-content: center;
+  justify-content: center;
+}
 
 %flex-column {
   display: flex;

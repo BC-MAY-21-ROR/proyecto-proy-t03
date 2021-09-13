@@ -4,6 +4,7 @@ class AppointmentsController < ApplicationController
 
   def index
     @appointment = Appointment.where(patient_id: get_patient)
+    @psychologist = Psychologist.all
   end
   
   def new
@@ -27,7 +28,7 @@ class AppointmentsController < ApplicationController
   
   def update
     @appointment.update(params_appointment)
-    if @appointment.update
+    if @appointment.save
       flash[:notice] = "Appointment successfully updated!"
       redirect_to appointments_path
     else
@@ -41,9 +42,6 @@ class AppointmentsController < ApplicationController
     redirect_to root_path
   end
   
-  
-  
-
   private
 
   def get_patient
