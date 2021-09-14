@@ -8,7 +8,9 @@
         <div class="patient-info-about_txtarea">
           <%= current_patient.description %>
         </div>
+         <%= link_to t('My Appointments'), appointments_path, class:"btn btn-primary"%>
       </div>
+     
     </div>
 
     <div class="patient-info-profesional">
@@ -34,5 +36,6 @@
     </div>
 
     <%= link_to t("edit_profile"), edit_patient_registration_path, class:"buton_edit mb-2"%>
+    
   </section>
 </div>

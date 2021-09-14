@@ -15,6 +15,19 @@ ActiveRecord::Schema.define(version: 2021_09_09_005447) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "appointment", force: :cascade do |t|
+    t.date "date"
+    t.time "time"
+    t.boolean "pay", default: false, null: false
+    t.string "message"
+    t.bigint "patient_id"
+    t.bigint "psychologist_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["patient_id"], name: "index_appointment_on_patient_id"
+    t.index ["psychologist_id"], name: "index_appointment_on_psychologist_id"
+  end
+
   create_table "appointments", force: :cascade do |t|
     t.datetime "datetime"
     t.boolean "pay", default: false, null: false
@@ -61,6 +74,8 @@ ActiveRecord::Schema.define(version: 2021_09_09_005447) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "appointment", "patients"
+  add_foreign_key "appointment", "psychologists"
   add_foreign_key "appointments", "patients"
   add_foreign_key "appointments", "psychologists"
 end
