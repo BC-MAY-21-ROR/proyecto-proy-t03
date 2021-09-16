@@ -1,0 +1,21 @@
+en:
+  my_appointments: "My Appointments"
+  # LIST
+  date: "Date"
+  price: "Price"
+  payed: "Payed"
+  pending_payment: "Pending Payment"
+  edit: "Edit"
+  delete: "Delete"
+  # EDIT
+  edit_appointment: "Edit Appointment"
+  form_message: "Reserve a date for your appointment!"
+  payment?: "Have you actually pay?"
+  psychologist_message: "Leave a message for you psychologist."
+  yes_answer: "Yes"
+  no_answer: "No"
+  # NEW
+  create_appointment: "Create a new Appointment!"
+  id_patient: "Your ID"
+  id_psychologist: "ID of the psychologist"
+

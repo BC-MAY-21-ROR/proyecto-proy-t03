@@ -1,9 +1,9 @@
 <div class="container">
   <section class="type-info">
     <% if params['commit'] == 'sign_up'%>
-    <h1 class="type-info_text">Hi, what are you?</h1>
+    <h1 class="type-info_text"><%= t('type_question') %></h1>
     <% elsif params['commit'] == 'sign_in' %>
-    <h1 class="type-info_text">Welcome back!</h1>
+    <h1 class="type-info_text"><%= t('welcome_back') %></h1>
     <% end %>
   </section>
   

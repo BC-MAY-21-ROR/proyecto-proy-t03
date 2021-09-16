@@ -41,6 +41,7 @@ es:
                  Eos, natus.Lorem ipsum dolor sit amet consectetur "
   psycho_html: <h2 class="hero-text_medium">Ayuda</h2>
   help_html: <h1 class="hero-text_large_es">Psicológica</h1>
+
   # PROFILE
   about_me: "Sobre mí"
   age: "Edad"
@@ -55,5 +56,14 @@ es:
 
   # TYPE
   type_question: "Hola, ¿qué eres?"
+  welcome_back: "Bienvenido!"
   psychologist_type: "Psicológo"
   patient_type: "Paciente"
+
+  # PSYCHOLOGIST LIST
+  choose_psychologist: "Selecciona tu Psicólogo en línea"
+  search_psychologist: "Busca psicólogo por"
+  alphabetical_order: "Orden Alfabético"
+  rating_order: "Rating"
+  schedule_appointment: "Agendar Cita"
+
