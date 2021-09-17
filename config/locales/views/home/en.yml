@@ -67,3 +67,8 @@ en:
   rating_order: "Rating"
   schedule_appointment: "Schedule Appointment"
 
+  # PRICES
+  price_individual: "20 USD"
+  price_couple: "30 USD"
+  price_package: "99 USD"
+

@@ -67,3 +67,8 @@ es:
   rating_order: "Rating"
   schedule_appointment: "Agendar Cita"
 
+  # PRICES
+  price_individual: "400 MXN"
+  price_couple: "600 MXN"
+  price_package: "1,999 MXN"
+

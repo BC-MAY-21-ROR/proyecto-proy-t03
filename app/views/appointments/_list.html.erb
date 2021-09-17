@@ -8,7 +8,7 @@
              <%= p.name if a.psychologist_id == p.id%> 
           <% end %> <br>
           <a><%= t('date') %>: </a> <%= a.datetime %> <br>
-          <a><%= t('price') %>: </a> $23 usd
+          <a><%= t('price') %>: </a> $<%= t('price_individual')%>
         </p>
       </div>
       <div class="middle-content">
