@@ -56,5 +56,19 @@ en:
 
   # TYPE
   type_question: "Hi, what are you?"
+  welcome_back: "Welcome Back!"
   psychologist_type: "Psychologist"
   patient_type: "Patient"
+
+  # PSYCHOLOGIST LIST
+  choose_psychologist: "Choose your online Psychologist"
+  search_psychologist: "Search Psychologist by"
+  alphabetical_order: "Alphabetical Order"
+  rating_order: "Rating"
+  schedule_appointment: "Schedule Appointment"
+
+  # PRICES
+  price_individual: "20 USD"
+  price_couple: "30 USD"
+  price_package: "99 USD"
+

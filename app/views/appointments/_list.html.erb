@@ -3,23 +3,23 @@
     <div class="list-element">
       <div class="left-content">
         <p>
-          <a>Psychologist:</a>
+          <a><%= t('psychologist') %>:</a>
           <% @psychologist.each do |p|%>
              <%= p.name if a.psychologist_id == p.id%> 
           <% end %> <br>
-          <a>Date: </a> <%= a.datetime %> <br>
-          <a>Price: </a> $50 usd
+          <a><%= t('date') %>: </a> <%= a.datetime %> <br>
+          <a><%= t('price') %>: </a> $<%= t('price_individual')%>
         </p>
       </div>
       <div class="middle-content">
         <p>
-          <%= "🟢 Payed" if a.pay == true %>
-          <%= "🟡 Pending payment" if a.pay == false %> 
+          <%= "🟢 #{t('payed')}" if a.pay == true %>
+          <%= "🟡 #{t('pending_payment')}" if a.pay == false %> 
         </p>
       </div>
       <div class="right-content">
-        <%= link_to "Edit", edit_appointment_path(a), class: "btn btn-edit" %>
-        <%= link_to "Delete", appointment_path(a), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-cancel" %>
+        <%= link_to t('edit'), edit_appointment_path(a), class: "btn btn-edit" %>
+        <%= link_to t('delete'), appointment_path(a), method: :delete, data: { confirm: t('cancel_question') }, class: "btn btn-cancel" %>
       </div>
     </div><br>
   <% end %>

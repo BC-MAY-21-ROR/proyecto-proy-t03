@@ -1,34 +1,34 @@
 <div class="edit_container ">
-  <h1 class="mt-2">Edit Appointment</h1>
+  <h1 class="mt-2"><%= t('edit_appointment') %></h1>
   <div class="form_edit_container">
     <%= form_for(@appointment) do |f| %>
 
       <div class="form-group mt-2">
-        <%= f.label :datetime, "Reserva una fecha para tu cita!", class:"form-label"%>
+        <%= f.label :datetime, t('form_message'), class:"form-label"%>
         <%= f.datetime_local_field :datetime, class:"form-control", placeholder:"dd/mm/aaaa --:--"%>
       </div>
 
       <div class="form-group mt-2">
-        <%= f.label :message, "Leave a message for you psychologist", class:"form label" %>
+        <%= f.label :message, t('psychologist_message'), class:"form label" %>
         <%= f.text_field :message, class:"form-control" %>
       </div>
       
       <div class="field mt-2 mb-2">
-        <h4>Do you actually pay?</h4>
+        <h4><%= t('payment?') %></h4>
         <div class="flexbox">
           <div class="form-check male">
             <%= f.radio_button(:pay, true, class:"form-check-input" , id:"flexCheckDefault") %>
-            <%= f.label(:pay, "Yes 🤗", value: true, class:"form-check-label")%>
+            <%= f.label(:pay, "#{t('yes_answer')} 🤗", value: true, class:"form-check-label")%>
           </div>
           <div class="form-check female">
             <%= f.radio_button(:pay, false, class:"form-check-input") %>
-            <%= f.label(:pay, "No 😯", value: false, class:"form-check-label")%>
+            <%= f.label(:pay, "#{t('no_answer')} 😯", value: false, class:"form-check-label")%>
           </div>
         </div>
       </div>
 
       <div class="actions mt-3">
-        <%= f.submit "Save", class: "btn btn-outline-primary d-block w-25 mx-auto mb-2" %>
+        <%= f.submit t('save'), class: "btn btn-outline-primary d-block w-25 mx-auto mb-2" %>
       </div>
 
       <div class="btn_cancel">

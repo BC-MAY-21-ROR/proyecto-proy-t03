@@ -1,0 +1,21 @@
+es:
+  my_appointments: "Mis Citas"
+  # LIST
+  date: "Fecha"
+  price: "Precio"
+  payed: "Pagado"
+  pending_payment: "Pago Pendiente"
+  edit: "Editar"
+  delete: "Eliminar"
+  # EDIT
+  edit_appointment: "Editar Cita"
+  form_message: "Reserva una fecha para tu cita!"
+  payment?: "¿Ya realizaste el pago?"
+  psychologist_message: "Deja un mensaje para tu psicólogo."
+  yes_answer: "Sí"
+  no_answer: "No"
+  # NEW
+  create_appointment: "¡Agenda una nueva Cita!"
+  id_patient: "Tú ID"
+  id_psychologist: "ID del psicólogo"
+

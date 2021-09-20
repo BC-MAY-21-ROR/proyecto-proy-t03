@@ -24,8 +24,8 @@
         <div class="toolbar">
         <% if patient_signed_in? %>
 
-          <%= link_to t('My Profile'), profile_patient_path, class:"text-decoration-none"%>
-          <%= link_to t('Sign Out'), destroy_patient_session_path, :method => :delete, class:"toolbar-sign_up text-decoration-none"%>
+          <%= link_to t('my_profile'), profile_patient_path, class:"text-decoration-none"%>
+          <%= link_to t('sign_out'), destroy_patient_session_path, :method => :delete, class:"toolbar-sign_up text-decoration-none"%>
         <% elsif psychologist_signed_in? %>
           <%= link_to t('my_profile'), profile_psychologist_path, class:"text-decoration-none"%>
           <%= link_to t('sign_out'), destroy_psychologist_session_path, :method => :delete, class:"toolbar-sign_up text-decoration-none" %>
@@ -55,8 +55,8 @@
  <div class="nav-toolbar">
     <% if patient_signed_in? %>
 
-      <%= link_to t('My Profile'), profile_patient_path, class:"nav-toolbar_link"%>
-      <%= link_to t('Sign Out'), destroy_patient_session_path, :method => :delete, class:"nav-toolbar_button"%>
+      <%= link_to t('my_profile'), profile_patient_path, class:"nav-toolbar_link"%>
+      <%= link_to t('sign_out'), destroy_patient_session_path, :method => :delete, class:"nav-toolbar_button"%>
 
     <% elsif psychologist_signed_in? %>
       <%= link_to t('my_profile'), profile_psychologist_path, class:"nav-toolbar_link"%>
@@ -71,4 +71,3 @@
   </div>
 </div>
 
-<!---->

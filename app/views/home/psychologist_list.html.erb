@@ -1,17 +1,17 @@
 
 <div class="list-container">
 
- <h1>Choose your online Psychologist</h1>
+ <h1><%= t('choose_psychologist') %></h1>
 
  <section class ="content">
    <div class="filter-section">
 
-    <p>Search Psychologist by</p>
+    <p><%= t('search_psychologist') %>:</p>
 
     <div class="filter-btns">
 
-      <%= button_to 'Alphabetical Order', { :action => "psychologist_list", :value => 'name'},class: "btn-filter" %>
-      <%= button_to 'Rating', { :action => "psychologist_list", :value => ''},class: "btn-filter" %>
+      <%= button_to t('alphabetical_order'), { :action => "psychologist_list", :value => 'name'},class: "btn-filter" %>
+      <%= button_to t('rating_order'), { :action => "psychologist_list", :value => ''},class: "btn-filter" %>
     
     </div >
 
@@ -30,7 +30,7 @@
           </div> 
           <span class=”glyphicon glyphicon-star-empty”>
           <% if not current_psychologist %>
-            <%= link_to 'Schedule Appointment', new_appointment_path(psychologist_id: e.id), class:"user_button"%>
+            <%= link_to t('schedule_appointment'), new_appointment_path(psychologist_id: e.id), class:"user_button"%>
           <% end %>
           <div class="start">
             <% 5.times do %>
